@@ -11,7 +11,8 @@ var gulp          = require('gulp')
 var config = {
   stylesPath         : './src/styles'
   ,scriptsPath       : './src/scripts'
-  ,externScriptsPath : './src/extern'
+  ,externScriptsPath : './src/unbounded'
+  ,bootstrapPath     : './node_modules/bootstrap-sass/assets'
   ,imagesPath      : './src/asset'
   // ,templatePath      : './src/templates'
   ,vendorPath        : './src/vendor'
@@ -92,39 +93,50 @@ gulp.task('styles', function() {
 /**
  * COMPILE EXTERN SCRIPTS
  */
-gulp.task('extern-js', function() {
-  return gulp.src(config.externScriptsPath  + '/js/*')
-    .pipe($.concat('extern-scripts.js'))
+gulp.task('bootstrap-js', function() {
+  return gulp.src(config.bootstrapPath  + '/javascript/bootstrap.js')
+    .pipe($.concat('bootstrap.min.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest(config.buildPath + '/extern'))
-    .pipe($.size({title: 'Extern Scripts'}));
+    .pipe(gulp.dest(config.buildPath + '/vendor/scripts'))
+    .pipe($.size({title: 'Bootstrap Scripts'}));
+});
+
+gulp.task('unbounded-js', function() {
+  return gulp.src(config.externScriptsPath  + '/**/*.js')
+    .pipe($.concat('vendor-scripts.min.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest(config.buildPath + '/vendor/scripts'))
+    .pipe($.size({title: 'Unbounded Vendor Scripts'}));
 });
 
 /**
  * COMPILE EXTERN CSS
  */
-gulp.task('extern-css', function() {
-  return gulp.src(config.externScriptsPath  + '/css/*')
-    .pipe($.concat('extern-css.js'))
+/*
+Styles had been imported in the _style.scss as well as bootstrap-sass node module
+gulp.task('unbounded-css', function() {
+  return gulp.src(config.externScriptsPath  + '/!**!/!*.css')
+    .pipe($.concat('vendor-styles.min.css'))
     .pipe($.cssmin())
-    .pipe(gulp.dest(config.buildPath + '/extern'))
-    .pipe($.size({title: 'Extern Css'}));
+    .pipe(gulp.dest(config.buildPath + '/styles'))
+    .pipe($.size({title: 'Unbounded Vendor Css'}));
 });
+*/
 
 /**
  * COMPILE EXTERN THEMES
  */
-gulp.task('extern-themes', function() {
-  return gulp.src(config.externScriptsPath  + '/themes/**/*')
-    .pipe(gulp.dest(config.buildPath + '/extern/themes'))
-    .pipe($.size({title: 'Extern Themes'}));
+gulp.task('unbounded-themes', function() {
+  return gulp.src(config.externScriptsPath  + '/css/themes/**/*')
+    .pipe(gulp.dest(config.buildPath + '/styles/themes'))
+    .pipe($.size({title: 'Unbounded Vendor Themes'}));
 });
 
 /**
  * COMPRESS EXTERN IMAGES AND CACHE THEM
  */
-gulp.task('extern-images', function() {
-  return gulp.src(config.externScriptsPath  + '/images/*')
+gulp.task('unbounded-images', function() {
+  return gulp.src(config.externScriptsPath  + '/css/images/*')
     .pipe(
       $.imagemin({
         optimizationLevel: 5,
@@ -132,8 +144,8 @@ gulp.task('extern-images', function() {
         interlaced: true
       })
     )
-    .pipe(gulp.dest(config.buildPath + '/extern/images'))
-    .pipe($.size({title: 'Extern Images'}));
+    .pipe(gulp.dest(config.buildPath + '/styles/images'))
+    .pipe($.size({title: 'Unbounded Vendor Images'}));
 });
 
 
@@ -174,8 +186,9 @@ gulp.task('vendor', function() {
   var fonts = gulp.src([
     config.vendorPath  + '/font-awesome/fonts/**.*'
     ,config.vendorPath + '/open-sans/fonts/**/**.*'
+    ,config.bootstrapPath + '/open-sans/fonts/**/**.*'
   ])
-    .pipe(gulp.dest(config.buildPath + '/vendor/fonts'))
+    .pipe(gulp.dest(config.buildPath + '/fonts'))
     .pipe($.size({title: 'Vendor: Fonts'}));
 
   /**
@@ -199,7 +212,7 @@ gulp.task('watch', function() {
   // gulp.watch(config.templatePath + '/**/*', ['theme']);
   gulp.watch(config.stylesPath   + '/**/*', ['styles']);
   gulp.watch(config.scriptsPath  + '/**/*', ['scripts']);
-  gulp.watch(config.scriptsPath  + '/**/*', ['extern']);
+  gulp.watch(config.externScriptsPath  + '/**/*', ['unbounded']);
   gulp.watch(config.imagesPath   + '/**/*', ['images']);
 });
 
@@ -215,10 +228,11 @@ gulp.task('build', function(cb) {
     ,'styles'
     // ,'theme'
     ,'images'
-    ,'extern-js'
-    ,'extern-css'
-    ,'extern-themes'
-    ,'extern-images'
+    ,'bootstrap-js'
+    ,'unbounded-js'
+   // ,'unbounded-css'
+    ,'unbounded-themes'
+    ,'unbounded-images'
     ,cb
   );
 });
