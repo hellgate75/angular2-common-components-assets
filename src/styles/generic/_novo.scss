@@ -1,0 +1,26 @@
+& {
+  @include font-size(regular)
+  @include font-smoothing;
+  background-color: white;
+  text-size-adjust: 100%;
+  overflow-y: scroll;
+  min-height: 100%;
+  font-size: 12px;
+
+  ::selection {
+    background-color: palette(brand);
+    color: black;
+  }
+
+  header {
+    background: initial;
+    clear: initial;
+    height: initial;
+    margin: initial;
+    min-height: initial;
+    position: initial;
+    top: initial;
+    width: initial;
+    z-index: initial;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "aa-styleguide",
+  "version": "1.0.0",
+  "description": "The AA Styleguide",
+  "author": "The AA Studio",
+  "main": "gulpfile.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/vendor",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.4.0",
+    "html5shiv": "~3.7.3",
+    "open-sans": "~1.1.0",
+    "normalize-css": "^3.0.3"
+  }
+}
