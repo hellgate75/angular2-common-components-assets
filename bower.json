@@ -1,13 +1,17 @@
 {
-  "name": "aa-styleguide",
+  "name": "angular2-common-components-assets",
   "version": "1.0.0",
-  "description": "The AA Styleguide",
-  "author": "The AA Studio",
+  "description": "The Angular2 Common Components Library Assets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellgate75/angular2-common-components-assets.git"
+  },
+  "author": "Fabrizio Torelli <hellgate75@gmail.com>",
+  "license": "MIT",
   "main": "gulpfile.js",
   "moduleType": [
     "node"
   ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
