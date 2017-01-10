@@ -18,10 +18,6 @@ var config = {
   ,buildPath         : './dist'
 }
 
-
-
-
-
 /**
  * CLEAR CACHE
  */
@@ -36,10 +32,6 @@ gulp.task('clear', function(cb) {
   );
 });
 
-
-
-
-
 /**
  * BOWER
  */
@@ -47,10 +39,6 @@ gulp.task('bower', function() {
   return bower(config.vendorPath)
     .pipe($.size({title: 'Bower'}))
 });
-
-
-
-
 
 /**
  * COMPILE STYLE
@@ -87,10 +75,6 @@ gulp.task('styles', function() {
     .pipe($.size({title:'Styles'}));
 });
 
-
-
-
-
 /**
  * PRETTIFY THEME FILES
  */
@@ -106,30 +90,39 @@ gulp.task('styles', function() {
 
 
 /**
- * COMPILE SCRIPTS
+ * COMPILE EXTERN SCRIPTS
  */
 gulp.task('extern-js', function() {
   return gulp.src(config.externScriptsPath  + '/js/*')
     .pipe($.concat('extern-scripts.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.buildPath + '/extern'))
-    .pipe($.size({title: 'Extern Scripts all files'}));
+    .pipe($.size({title: 'Extern Scripts'}));
 });
 
+/**
+ * COMPILE EXTERN CSS
+ */
 gulp.task('extern-css', function() {
   return gulp.src(config.externScriptsPath  + '/css/*')
     .pipe($.concat('extern-css.js'))
     .pipe($.cssmin())
     .pipe(gulp.dest(config.buildPath + '/extern'))
-    .pipe($.size({title: 'Extern Css all files'}));
+    .pipe($.size({title: 'Extern Css'}));
 });
 
+/**
+ * COMPILE EXTERN THEMES
+ */
 gulp.task('extern-themes', function() {
   return gulp.src(config.externScriptsPath  + '/themes/**/*')
     .pipe(gulp.dest(config.buildPath + '/extern/themes'))
-    .pipe($.size({title: 'Extern Themes all files'}));
+    .pipe($.size({title: 'Extern Themes'}));
 });
 
+/**
+ * COMPRESS EXTERN IMAGES AND CACHE THEM
+ */
 gulp.task('extern-images', function() {
   return gulp.src(config.externScriptsPath  + '/images/*')
     .pipe(
@@ -140,7 +133,7 @@ gulp.task('extern-images', function() {
       })
     )
     .pipe(gulp.dest(config.buildPath + '/extern/images'))
-    .pipe($.size({title: 'Extern Images all files'}));
+    .pipe($.size({title: 'Extern Images'}));
 });
 
 
@@ -154,11 +147,6 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(config.buildPath + '/scripts'))
     .pipe($.size({title: 'Scripts'}));
 });
-
-
-
-
-
 /**
  * COMPRESS IMAGES AND CACHE THEM
  */
@@ -174,10 +162,6 @@ gulp.task('images', function() {
     .pipe(gulp.dest(config.buildPath + '/images'))
     .pipe($.size({title: 'Images'}));
 });
-
-
-
-
 
 /**
  * COMPILE VENDOR FILES
@@ -208,10 +192,6 @@ gulp.task('vendor', function() {
   return merge(fonts, js);
 });
 
-
-
-
-
 /**
  * WATCHING FOR CHANGES
  */
@@ -222,10 +202,6 @@ gulp.task('watch', function() {
   gulp.watch(config.scriptsPath  + '/**/*', ['extern']);
   gulp.watch(config.imagesPath   + '/**/*', ['images']);
 });
-
-
-
-
 
 /**
  * BUILD TASK
@@ -246,10 +222,6 @@ gulp.task('build', function(cb) {
     ,cb
   );
 });
-
-
-
-
 
 /**
  * DEFAULT TASK
