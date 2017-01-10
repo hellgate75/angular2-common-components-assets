@@ -2,20 +2,20 @@
  * LOAD PLUGINS
  */
 var gulp          = require('gulp')
-    ,bower        = require('gulp-bower')
-    ,merge        = require('merge-stream')
-    ,del          = require('del')
-    ,rs           = require('run-sequence')
-    ,$            = require('gulp-load-plugins')();
+  ,bower        = require('gulp-bower')
+  ,merge        = require('merge-stream')
+  ,del          = require('del')
+  ,rs           = require('run-sequence')
+  ,$            = require('gulp-load-plugins')();
 
 var config = {
-  stylesPath       : './src/styles'
-  ,scriptsPath     : './src/scripts'
-  ,externScriptsPath     : './src/scripts'
+  stylesPath         : './src/styles'
+  ,scriptsPath       : './src/scripts'
+  ,externScriptsPath : './src/extern'
   ,imagesPath      : './src/asset'
-  // ,templatePath    : './src/templates'
-  ,vendorPath      : './src/vendor'
-  ,buildPath       : './dist'
+  // ,templatePath      : './src/templates'
+  ,vendorPath        : './src/vendor'
+  ,buildPath         : './dist'
 }
 
 
@@ -109,29 +109,29 @@ gulp.task('styles', function() {
  * COMPILE SCRIPTS
  */
 gulp.task('extern-js', function() {
-  return gulp.src(config.externScriptsPath  + '/*.js')
+  return gulp.src(config.externScriptsPath  + '/js/*')
     .pipe($.concat('extern-scripts.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.buildPath + '/extern'))
-    .pipe($.size({title: 'Extern Scripts'}));
+    .pipe($.size({title: 'Extern Scripts all files'}));
 });
 
 gulp.task('extern-css', function() {
-  return gulp.src(config.externScriptsPath  + '/*.css')
+  return gulp.src(config.externScriptsPath  + '/css/*')
     .pipe($.concat('extern-css.js'))
     .pipe($.cssmin())
     .pipe(gulp.dest(config.buildPath + '/extern'))
-    .pipe($.size({title: 'Extern Css'}));
+    .pipe($.size({title: 'Extern Css all files'}));
 });
 
 gulp.task('extern-themes', function() {
-  return gulp.src(config.externScriptsPath  + '/themes')
+  return gulp.src(config.externScriptsPath  + '/themes/**/*')
     .pipe(gulp.dest(config.buildPath + '/extern/themes'))
-    .pipe($.size({title: 'Extern Themes'}));
+    .pipe($.size({title: 'Extern Themes all files'}));
 });
 
 gulp.task('extern-images', function() {
-  return gulp.src(config.externScriptsPath  + '/images/*.*')
+  return gulp.src(config.externScriptsPath  + '/images/*')
     .pipe(
       $.imagemin({
         optimizationLevel: 5,
@@ -140,7 +140,7 @@ gulp.task('extern-images', function() {
       })
     )
     .pipe(gulp.dest(config.buildPath + '/extern/images'))
-    .pipe($.size({title: 'Extern Images'}));
+    .pipe($.size({title: 'Extern Images all files'}));
 });
 
 
@@ -190,7 +190,7 @@ gulp.task('vendor', function() {
   var fonts = gulp.src([
     config.vendorPath  + '/font-awesome/fonts/**.*'
     ,config.vendorPath + '/open-sans/fonts/**/**.*'
-  ]) 
+  ])
     .pipe(gulp.dest(config.buildPath + '/vendor/fonts'))
     .pipe($.size({title: 'Vendor: Fonts'}));
 
@@ -219,6 +219,7 @@ gulp.task('watch', function() {
   // gulp.watch(config.templatePath + '/**/*', ['theme']);
   gulp.watch(config.stylesPath   + '/**/*', ['styles']);
   gulp.watch(config.scriptsPath  + '/**/*', ['scripts']);
+  gulp.watch(config.scriptsPath  + '/**/*', ['extern']);
   gulp.watch(config.imagesPath   + '/**/*', ['images']);
 });
 
