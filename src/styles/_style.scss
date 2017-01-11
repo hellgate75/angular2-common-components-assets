@@ -1,8 +1,6 @@
-@import "../unbounded/css/jquery-ui.css";
-@import "../unbounded/css/semantic.css";
+@import "./variables";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../vendor/font-awesome/scss/font-awesome";
-@import "./variables";
 @import "../vendor/open-sans/scss/open-sans";
 
 .ui.menu .header.item > img.logo {

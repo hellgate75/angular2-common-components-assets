@@ -112,23 +112,20 @@ gulp.task('unbounded-js', function() {
 /**
  * COMPILE EXTERN CSS
  */
-/*
-Styles had been imported in the _style.scss as well as bootstrap-sass node module
 gulp.task('unbounded-css', function() {
-  return gulp.src(config.externScriptsPath  + '/!**!/!*.css')
+  return gulp.src(config.externScriptsPath  + '/**/*.css')
     .pipe($.concat('vendor-styles.min.css'))
     .pipe($.cssmin())
-    .pipe(gulp.dest(config.buildPath + '/styles'))
+    .pipe(gulp.dest(config.buildPath + '/vendor/styles'))
     .pipe($.size({title: 'Unbounded Vendor Css'}));
 });
-*/
 
 /**
  * COMPILE EXTERN THEMES
  */
 gulp.task('unbounded-themes', function() {
   return gulp.src(config.externScriptsPath  + '/css/themes/**/*')
-    .pipe(gulp.dest(config.buildPath + '/styles/themes'))
+    .pipe(gulp.dest(config.buildPath + '/vendor/styles/themes'))
     .pipe($.size({title: 'Unbounded Vendor Themes'}));
 });
 
@@ -144,7 +141,7 @@ gulp.task('unbounded-images', function() {
         interlaced: true
       })
     )
-    .pipe(gulp.dest(config.buildPath + '/styles/images'))
+    .pipe(gulp.dest(config.buildPath + '/vendor/styles/images'))
     .pipe($.size({title: 'Unbounded Vendor Images'}));
 });
 
@@ -230,7 +227,7 @@ gulp.task('build', function(cb) {
     ,'images'
     ,'bootstrap-js'
     ,'unbounded-js'
-   // ,'unbounded-css'
+    ,'unbounded-css'
     ,'unbounded-themes'
     ,'unbounded-images'
     ,cb
