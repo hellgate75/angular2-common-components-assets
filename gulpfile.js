@@ -183,7 +183,7 @@ gulp.task('vendor', function() {
   var fonts = gulp.src([
     config.vendorPath  + '/font-awesome/fonts/**.*'
     ,config.vendorPath + '/open-sans/fonts/**/**.*'
-    ,config.bootstrapPath + '/open-sans/fonts/**/**.*'
+    ,config.bootstrapPath + '/fonts/**/**.*'
   ])
     .pipe(gulp.dest(config.buildPath + '/fonts'))
     .pipe($.size({title: 'Vendor: Fonts'}));
