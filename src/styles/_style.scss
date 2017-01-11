@@ -1,7 +1,10 @@
 @import "./variables";
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$fa-font-path: "~font-awesome/fonts";
 @import "../vendor/font-awesome/scss/font-awesome";
-@import "../vendor/open-sans/scss/open-sans";
+/*$open-sans-path: "~open-sans/fonts";
+@import "../vendor/open-sans/scss/open-sans";*/
 
 .ui.menu .header.item > img.logo {
     margin-right: 12px;
