@@ -10,7 +10,10 @@ $screen-sorting-bar-sm:          760px !default;
 $screen-sorting-bar-sm-2:        769px !default;
 $screen-sorting-bar-md:          850px !default;
 $screen-sorting-bar-lg:          996px !default;
-$screen-generic-list-xs:         849px !default;
+$screen-generic-list-xlg:       1200px !default;
+$screen-generic-list-lg:         996px !default;
+$screen-generic-list-md:         850px !default;
+$screen-generic-list-xs:         652px !default;
 
 
 /* Login */
@@ -20,3 +23,8 @@ $form-inline-overflow:          hidden;
 $form-inline-group-display:     inline-flex;
 $form-inline-display:           block;
 
+/* Filter box */
+$filter-box-width:              100%;
+
+/* Edit dialog */
+$edit-dialog-width:             100%;

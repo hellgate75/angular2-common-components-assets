@@ -4,7 +4,10 @@
 .paging-box {
   display: inline-block;
   width: 100%;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif ! important;
+  font-size: 14px ! important;
   text-align: center;
+  color: #908e8e;
   &-control {
     display: inline-block;
     width: 100%;

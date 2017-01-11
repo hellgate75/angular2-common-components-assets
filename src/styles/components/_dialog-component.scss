@@ -1,3 +1,6 @@
 @import "../variables";
 @import "../style";
 
+.ng-edit-dialog {
+  width: $edit-dialog-width;
+}

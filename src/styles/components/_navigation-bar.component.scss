@@ -1,0 +1,153 @@
+//Navigation bar
+.ng-navigation-bar {
+  width: 100%;
+  display: block;
+  .navbar.navbar-default {
+    border: 0px !important;
+    display: inline;
+    background-color: transparent ! important;
+    .container-fluid {
+      border: 0px !important;
+      background-color: transparent ! important;
+      .ui-steps a.step:last-child {
+        border: 1px solid #d0d0d0 !important;
+        border-radius: 5px !important;
+      }
+      .ui-steps a.step {
+        max-width: 300px;
+      }
+    }
+    .ui.steps a.step {
+      border: 0px;
+      border-right: 1px solid #f0f0f0;
+    }
+  }
+}
+
+@media (min-width: $screen-app-lg) {
+  .ng-navigation-bar {
+    .ui.steps a.step,
+    .ui.steps a.step:hover {
+      font-size: 22px;
+    }
+    .ui.steps a.step:focus {
+      outline-color: rgb(51, 51, 51) ! important;
+      outline-style: none ! important;
+      outline-width:0px ! important;
+    }
+  }
+}
+@media (max-width: $screen-app-md) {
+  .ng-navigation-bar {
+    .ui.steps a.step,
+    .ui.steps a.step:hover,
+    a.active.step:hover {
+      font-size: 20px;
+      /*
+      border-bottom: 0.1rem solid #f0f0f0 !important;
+      width: 100% !important;
+      */
+    }
+    .ui.steps a.step:focus {
+      outline-color: rgb(51, 51, 51) ! important;
+      outline-style: none ! important;
+      outline-width:0px ! important;
+    }
+  }
+}
+@media (max-width: $screen-app-sm) {
+  .ng-navigation-bar {
+    .ui.steps a.step,
+    .ui.steps a.step:hover  {
+      font-size: 16px;
+      border: 0px  ! important;
+      border-right: 0px  ! important;
+      border-bottom: 0.1rem solid #f0f0f0 ! important;
+      width: 100% !important;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 1.14285714em 2em;
+      border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+    }
+    .ui.steps .step:after,
+    a.active.step:hover::after,
+    a.active.step:hover::after {
+      display: none ! important;
+    }
+    .ui.steps a.step:focus {
+      outline-color: rgb(51, 51, 51) ! important;
+      outline-style: none ! important;
+      outline-width:0px ! important;
+    }
+    .ui.steps {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      overflow: visible;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    .ui.steps a.step:last-child {
+      border-bottom: 0px ! important;
+    }
+  }
+}
+@media (max-width: $screen-app-xs) {
+  .ng-navigation-bar {
+    .ui.steps a.step,
+    .ui.steps a.step:hover  {
+      font-size: 14px;
+      border: 0px ! important;
+      border-right: 0px  ! important;
+      border-bottom: 0.1rem solid #f0f0f0 ! important;
+      width: 100% !important;
+    }
+    .ui.steps a.step:focus {
+      outline-color: rgb(51, 51, 51) ! important;
+      outline-style: none ! important;
+      outline-width:0px ! important;
+    }
+    .ui.steps .step:after,
+    a.active.step:hover::after,
+    a.active.step:hover::after {
+      display: none ! important;
+    }
+    .ui.steps a.step:last-child {
+      border-bottom: 0px ! important;
+    }
+  }
+}
+@media (max-width: $screen-app-xxs) {
+  .ng-navigation-bar {
+    .ui.steps a.step,
+    .ui.steps a.step:hover  {
+      font-size: 14px;
+      border: 0px  ! important;
+      border-right: 0px  ! important;
+      border-bottom: 0.1rem solid #f0f0f0 ! important;
+      width: 100% !important;
+      text-decoration: none ! important;
+
+    }
+    .ui.steps a.step:focus {
+      outline-color: rgb(51, 51, 51) ! important;
+      outline-style: none ! important;
+      outline-width:0px ! important;
+    }
+    .ui.steps .step:after,
+    a.active.step:hover::after,
+    a.active.step:hover::after {
+      display: none ! important;
+    }
+    .ui.steps a.step:last-child {
+      border-bottom: 0px ! important;
+    }
+  }
+}

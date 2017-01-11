@@ -1,2 +1,6 @@
 @import "../variables";
 @import "../style";
+
+input.ng-filter-box {
+  width: $filter-box-width;
+}
