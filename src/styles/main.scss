@@ -3,6 +3,7 @@
 //=====================================
 // #SASS-ARCHITECTURE
 //-------------------------------------
+// 0) MIXINS     : Mixin directives;
 // 1) SETTINGS   : Global variables, config switches;
 // 2) TOOLS      : Default mixins and functions;
 // 3) GENERIC    : Ground-zero styles (Normalize.css, resets, box-sizing);
@@ -12,6 +13,8 @@
 // 7) THEMES     : Themed components;
 // 8) TRUMPS     : Helpers, overrides and !importants.
 //=====================================
+
+@import "mixins";
 
 @import "settings/globals";
 @import "settings/colours";
