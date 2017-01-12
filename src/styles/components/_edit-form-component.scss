@@ -3,6 +3,6 @@
 
 .ng-edit-form {
   > .ui-form {
-    width: 100%;
+    width: $edit-dialog-form-width;
   }
 }
