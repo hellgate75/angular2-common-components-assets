@@ -10,9 +10,26 @@ $color8: #7F00FF; // Purple
 $color9: #FF00FF; // Magenta
 $color10: #000; // Black
 $color11: #fff; // White
+$color-red: $color1;
+$color-orange: $color2;
+$color-red: $color3;
+$color-yellow: $color4;
+$color-green: $color5;
+$color-light-blue: $color6;
+$color-cyan: $color7;
+$color-purple: $color8;
+$color-magenta: $color9;
+$color-black: $color10;
+$color-white: $color11;
+$color-pink: pink; // Yep, pink!
+$blockquote-bg: #faebbe; // Yellowy
+$color-link: #3D518F; // blue-dark
 
 // Fonts
 $blockquote: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+// Mixin variables
+$defined-bs-type: border-box !default;
 
 // Breakpoint variables
 // ====================================================================
@@ -51,3 +68,4 @@ $filter-box-width:              100%;
 
 /* Edit dialog */
 $edit-dialog-width:             100%;
+

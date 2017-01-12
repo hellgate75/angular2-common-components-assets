@@ -1,12 +1,23 @@
 @import "variables";
 
-//Clearfix
+// Mixin for adding clearfix to components
+// ====================================================================
 @mixin clearfix-type {
   @include clearfix;
 }
 
 
-// Media Query mixin
+// Mixin for box-sizing
+// ====================================================================
+
+@mixin bs($bs-type: $defined-bs-type) {
+  -webkit-box-sizing: $bs-type;
+  -moz-box-sizing: $bs-type;
+  box-sizing: $bs-type;
+}
+
+// Mixin for creating media queries on components
+// ====================================================================
 @mixin MQ($canvas) {
   @if $canvas == XS {
     @media only screen and (min-width: $XS) and (max-width: $S - 1) { @content; }
@@ -58,7 +69,8 @@
   }
 }
 
-//Mixin base link button
+// Mixin for creating pill shaped buttons
+// ====================================================================
 @mixin simple-button-links($button-base: darken($color11,10%),
                            $button-text: darken($color10,50%),
                            $button-hover: darken($color11,15%)) {
