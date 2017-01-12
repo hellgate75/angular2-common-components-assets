@@ -1,3 +1,8 @@
+/* Vendor SASS support*/
+$legacy-support-for-ie : true;
+$legacy-support-for-ie6 : $legacy-support-for-ie;
+$legacy-support-for-ie7 : $legacy-support-for-ie;
+
 /* Base colors*/
 $color1: #FF0000; // Red
 $color2: #FFBF00; // Orange
