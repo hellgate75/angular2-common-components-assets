@@ -94,7 +94,7 @@ gulp.task('styles', function() {
  * COMPILE EXTERN SCRIPTS
  */
 gulp.task('bootstrap-js', function() {
-  return gulp.src(config.bootstrapPath  + '/javascript/bootstrap.js')
+  return gulp.src(config.bootstrapPath  + '/javascripts/bootstrap.js')
     .pipe($.concat('bootstrap.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.buildPath + '/vendor/scripts'))
