@@ -16,7 +16,13 @@ $color9: #FF00FF; // Magenta
 $color10: #000; // Black
 $color11: #fff; // White
 $color-red: $color1;
+$color-darkred: darken($color1, 20);
 $color-orange: $color2;
+$color-darkorange: darken($color2, 20);
+$color-blue: blue;
+$color-darkblue: darken($color-blue, 20);
+$color-navy: #3c5876; //navy
+$ng-user-status-bg: $color-navy;
 $color-red: $color3;
 $color-yellow: $color4;
 $color-green: $color5;
@@ -71,8 +77,25 @@ $form-inline-display:           block;
 /* Filter box */
 $filter-box-width:              100%;
 
+/* Generic dialog */
+$generic-dialog-width:             100%;
+
+
 /* Edit dialog */
 $edit-dialog-width:             100%;
 
 /* Edit form */
-$edit-dialog-form-width:             100%;
+$edit-dialog-form-width:        100%;
+
+/* User Status and login */
+$login-logo-url-path:           './assets/images/logo.png' !default;
+
+//Major directives
+
+
+@mixin dinline() {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}

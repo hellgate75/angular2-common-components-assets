@@ -1,153 +1,210 @@
+@import "../variables";
+@import "../style";
+
 //Navigation bar
 .ng-navigation-bar {
   width: 100%;
   display: block;
+  border: 0px !important;
+
+  .hidden {
+    display: none;
+  }
   .navbar.navbar-default {
     border: 0px !important;
-    display: inline;
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-left: 25px !important;
+    display: inline-block !important;
     background-color: transparent ! important;
     .container-fluid {
+      margin: 0px !important;
+      padding: 0px !important;
       border: 0px !important;
       background-color: transparent ! important;
       .ui-steps a.step:last-child {
-        border: 1px solid #d0d0d0 !important;
+        border: 0px !important;
         border-radius: 5px !important;
       }
       .ui-steps a.step {
+        border: 0px !important;
         max-width: 300px;
       }
-    }
-    .ui.steps a.step {
-      border: 0px;
-      border-right: 1px solid #f0f0f0;
+      .ui.steps a.step {
+        border: 0px !important;
+      }
+      .ui.steps a.step:hover,
+      .ui.steps a.step {
+        border: 0px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        padding-top: 20px !important;
+        background-color: transparent ! important;
+        display: block;
+        margin-top: 20px;
+        margin-left: 10px;
+        color: $color-orange !important;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
+      .ui.steps a.active.step:hover,
+      .ui.steps a.active.step {
+        border: 0px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        padding-top: 20px !important;
+        background-color: transparent ! important;
+        display: block;
+        margin-top: 20px;
+        margin-left: 10px;
+        color: $color-darkorange !important;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .ui.steps a.step:hover,
+      .ui.steps a.active.step:hover {
+        color: lighten($color-darkorange, 5) !important;
+      }
     }
   }
 }
 
 @media (min-width: $screen-app-lg) {
   .ng-navigation-bar {
-    .ui.steps a.step,
-    .ui.steps a.step:hover {
-      font-size: 22px;
-    }
-    .ui.steps a.step:focus {
-      outline-color: rgb(51, 51, 51) ! important;
-      outline-style: none ! important;
-      outline-width:0px ! important;
+    .navbar.navbar-default {
+      .container-fluid {
+        .ui.steps a.step,
+        .ui.steps a.step:hover {
+          border: 0px !important;
+          font-size: 22px;
+        }
+        .ui.steps a.step:focus {
+          border: 0px !important;
+          color: lighten($color-darkorange, 5) !important;
+          outline-color: lighten($color-darkorange, 5) !important;
+          outline-style: none !important;
+          outline-width:0px !important;
+        }
+      }
     }
   }
 }
 @media (max-width: $screen-app-md) {
   .ng-navigation-bar {
-    .ui.steps a.step,
-    .ui.steps a.step:hover,
-    a.active.step:hover {
-      font-size: 20px;
-      /*
-      border-bottom: 0.1rem solid #f0f0f0 !important;
-      width: 100% !important;
-      */
-    }
-    .ui.steps a.step:focus {
-      outline-color: rgb(51, 51, 51) ! important;
-      outline-style: none ! important;
-      outline-width:0px ! important;
+    .navbar.navbar-default {
+      .container-fluid {
+        .ui.steps a.step,
+        .ui.steps a.step:hover,
+        a.active.step:hover {
+          border: 0px !important;
+          font-size: 20px;
+        }
+        .ui.steps a.step:focus {
+          border: 0px !important;
+          color: lighten($color-darkorange, 5) !important;
+          outline-color: lighten($color-darkorange, 5) !important;
+          outline-style: none !important;
+          outline-width:0px !important;
+        }
+      }
     }
   }
 }
 @media (max-width: $screen-app-sm) {
   .ng-navigation-bar {
-    .ui.steps a.step,
-    .ui.steps a.step:hover  {
-      font-size: 16px;
-      border: 0px  ! important;
-      border-right: 0px  ! important;
-      border-bottom: 0.1rem solid #f0f0f0 ! important;
-      width: 100% !important;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      padding: 1.14285714em 2em;
-      border-radius: 0.28571429rem 0.28571429rem 0em 0em;
-    }
-    .ui.steps .step:after,
-    a.active.step:hover::after,
-    a.active.step:hover::after {
-      display: none ! important;
-    }
-    .ui.steps a.step:focus {
-      outline-color: rgb(51, 51, 51) ! important;
-      outline-style: none ! important;
-      outline-width:0px ! important;
-    }
-    .ui.steps {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      overflow: visible;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-    }
-    .ui.steps a.step:last-child {
-      border-bottom: 0px ! important;
+    .navbar.navbar-default {
+      .container-fluid {
+        .ui.steps a.step,
+        .ui.steps a.step:hover  {
+          border: 0px !important;
+          font-size: 16px;
+          width: 100% !important;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          padding: 1.14285714em 2em;
+        }
+        .ui.steps .step:after,
+        a.active.step:hover::after,
+        a.active.step:hover::after {
+          display: none !important;
+        }
+        .ui.steps a.step:focus {
+          border: 0px !important;
+          color: lighten($color-darkorange, 5) !important;
+          outline-color: lighten($color-darkorange, 5) !important;
+          outline-style: none !important;
+          outline-width:0px !important;
+        }
+        .ui.steps {
+          @include dinline();
+          border: 0px !important;
+          overflow: visible;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+      }
     }
   }
 }
 @media (max-width: $screen-app-xs) {
   .ng-navigation-bar {
-    .ui.steps a.step,
-    .ui.steps a.step:hover  {
-      font-size: 14px;
-      border: 0px ! important;
-      border-right: 0px  ! important;
-      border-bottom: 0.1rem solid #f0f0f0 ! important;
-      width: 100% !important;
-    }
-    .ui.steps a.step:focus {
-      outline-color: rgb(51, 51, 51) ! important;
-      outline-style: none ! important;
-      outline-width:0px ! important;
-    }
-    .ui.steps .step:after,
-    a.active.step:hover::after,
-    a.active.step:hover::after {
-      display: none ! important;
-    }
-    .ui.steps a.step:last-child {
-      border-bottom: 0px ! important;
+    .navbar.navbar-default {
+      .container-fluid {
+        .ui.steps a.step,
+        .ui.steps a.step:hover  {
+          border: 0px !important;
+          font-size: 14px;
+          width: 100% !important;
+        }
+        .ui.steps a.step:focus {
+          border: 0px !important;
+          color: lighten($color-darkorange, 5) !important;
+          outline-color: lighten($color-darkorange, 5) !important;
+          outline-style: none !important;
+          outline-width:0px !important;
+        }
+        .ui.steps .step:after,
+        a.active.step:hover::after,
+        a.active.step:hover::after {
+          display: none !important;
+        }
+      }
     }
   }
 }
 @media (max-width: $screen-app-xxs) {
   .ng-navigation-bar {
-    .ui.steps a.step,
-    .ui.steps a.step:hover  {
-      font-size: 14px;
-      border: 0px  ! important;
-      border-right: 0px  ! important;
-      border-bottom: 0.1rem solid #f0f0f0 ! important;
-      width: 100% !important;
-      text-decoration: none ! important;
+    .navbar.navbar-default {
+      .container-fluid {
+        .ui.steps a.step,
+        .ui.steps a.step:hover  {
+          border: 0px !important;
+          font-size: 14px;
+          width: 100% !important;
+          text-decoration: none !important;
 
-    }
-    .ui.steps a.step:focus {
-      outline-color: rgb(51, 51, 51) ! important;
-      outline-style: none ! important;
-      outline-width:0px ! important;
-    }
-    .ui.steps .step:after,
-    a.active.step:hover::after,
-    a.active.step:hover::after {
-      display: none ! important;
-    }
-    .ui.steps a.step:last-child {
-      border-bottom: 0px ! important;
+        }
+        .ui.steps a.step:focus {
+          border: 0px !important;
+          color: lighten($color-darkorange, 5) !important;
+          outline-color: lighten($color-darkorange, 5) !important;
+          outline-style: none !important;
+          outline-width:0px !important;
+        }
+        .ui.steps .step:after,
+        a.active.step:hover::after,
+        a.active.step:hover::after {
+          display: none !important;
+        }
+      }
     }
   }
 }
+

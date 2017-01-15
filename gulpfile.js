@@ -1,7 +1,7 @@
 /**
  * LOAD PLUGINS
  */
-var gulp          = require('gulp')
+var gulp        = require('gulp')
   ,bower        = require('gulp-bower')
   ,merge        = require('merge-stream')
   ,del          = require('del')

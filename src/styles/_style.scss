@@ -1,13 +1,13 @@
 @import "./variables";
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 $fa-font-path: "~font-awesome/fonts";
-@import "../vendor/font-awesome/scss/font-awesome";
+@import "~font-awesome/scss/font-awesome";
 /*$open-sans-path: "~open-sans/fonts";
 @import "../vendor/open-sans/scss/open-sans";*/
 
 .ui.menu .header.item > img.logo {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 .intro {
@@ -47,5 +47,46 @@ $fa-font-path: "~font-awesome/fonts";
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+.btn-primary,
+.btn.btn-primary {
+  background-attachment: fixed !important;
+  background-image: none !important;
+  color: #fff !important;
+  background-color: #337ab7!important;
+  border-color: #2e6da4 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn-secondary,
+.btn.btn-secondary {
+  background-attachment: fixed !important;
+  background-image: none !important;
+  color: #000 !important;
+  background-color: #d2c7c7;
+  border: 1px solid #b9b4b4;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn-primary:hover,
+.btn.btn-primary.ui-state-hover {
+  background-attachment: fixed !important;
+  background-image: none !important;
+  color: #fff !important;
+  background-color: darken(#337ab7, 10) !important;
+  border-color: darken(#2e6da4, 10) !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn-secondary:hover,
+.btn.btn-secondary.ui-state-hover {
+  background-attachment: fixed !important;
+  background-image: none !important;
+  color: #000 !important;
+  background-color: darken(#d2c7c7, 10);
+  border: 1px solid darken(#b9b4b4, 10);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 

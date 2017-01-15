@@ -15,6 +15,7 @@
     "bootstrap-sass": "^3.3.7",
     "compass": "^0.1.1",
     "del": "^2.2.1",
+    "font-awesome": "^4.7.0",
     "graceful-fs": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -45,5 +46,9 @@
     "build": "npm install && gulp build",
     "only-build": "gulp build",
     "lint": "scss-lint"
+  },
+  "devDependencies": {
+    "node-compass": "^0.2.4",
+    "scss-lint": "0.0.0"
   }
 }
