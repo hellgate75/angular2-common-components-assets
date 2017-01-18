@@ -15,26 +15,41 @@ $color8: #7F00FF; // Purple
 $color9: #FF00FF; // Magenta
 $color10: #000; // Black
 $color11: #fff; // White
-$color-red: $color1;
-$color-darkred: darken($color1, 20);
-$color-orange: $color2;
-$color-darkorange: darken($color2, 20);
-$color-blue: blue;
-$color-darkblue: darken($color-blue, 20);
-$color-navy: #3c5876; //navy
-$ng-user-status-bg: $color-navy;
-$color-red: $color3;
-$color-yellow: $color4;
-$color-green: $color5;
-$color-light-blue: $color6;
-$color-cyan: $color7;
-$color-purple: $color8;
-$color-magenta: $color9;
-$color-black: $color10;
-$color-white: $color11;
-$color-pink: pink; // Yep, pink!
-$blockquote-bg: #faebbe; // Yellowy
-$color-link: #3D518F; // blue-dark
+$color-red: $color1;                                      // red
+$color-light-red: lighten($color-red, 20);                // light red
+$color-dark-red: darken($color-red, 20);                  // dark red
+$color-orange: #FFBF00;                                   // orange
+$color-light-orange: lighten($color-orange, 20);          // light orange
+$color-dark-orange: darken($color-orange, 20);            // dark orange
+$color-light-blue: $color6;                               // light blue
+$color-blue: $color7;                                     // blue
+$color-dark-blue: darken($color-blue, 20);                // dark yellow
+$color-navy: #3c5876;                                     // navy
+$color-light-navy: lighten($color-navy, 20);              // light navy
+$color-dark-navy: darken($color-navy, 20);                // dark navy
+$ng-user-status-bg: $color-navy;                          // user status background
+$color-yellow: $color3;                                   // yellow
+$color-light-yellow: lighten($color-yellow, 20);          // light yellow
+$color-dark-yellow: darken($color-yellow, 20);            // dark yellow
+$color-cyan: $color4;                                     // cyan
+$color-light-cyan: lighten($color-cyan, 20);              // light cyan
+$color-dark-cyan: darken($color-cyan, 20);                // dark cyan
+$color-green: $color5;                                    // green
+$color-light-green: lighten($color-green, 20);            // light green
+$color-dark-green: darken($color-green, 20);              // dark green
+$color-purple: $color8;                                   // purple
+$color-light-purple: lighten($color-purple, 20);          // light purple
+$color-dark-purple: darken($color-purple, 20);            // dark purple
+$color-magenta: $color9;                                  // magenta
+$color-light-magenta: lighten($color-magenta, 20);        // light green
+$color-dark-magenta: darken($color-magenta, 20);          // dark green
+$color-black: $color10;                                   // black
+$color-white: $color11;                                   // white
+$color-pink: pink;                                        // pink!
+$color-light-pink: lighten($color-pink, 20);              // light pink!
+$color-dark-pink: darken($color-pink, 20);                // dark pink!
+$blockquote-bg: #faebbe;                                  // Yellowy
+$color-link: #3D518F;                                     // dark custom blue
 
 // Fonts
 $blockquote: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;

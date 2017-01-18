@@ -57,14 +57,14 @@
         display: block;
         margin-top: 20px;
         margin-left: 10px;
-        color: $color-darkorange !important;
+        color: $color-dark-orange !important;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 24px;
       }
       .ui.steps a.step:hover,
       .ui.steps a.active.step:hover {
-        color: lighten($color-darkorange, 5) !important;
+        color: lighten($color-dark-orange, 5) !important;
       }
     }
   }
@@ -81,8 +81,8 @@
         }
         .ui.steps a.step:focus {
           border: 0px !important;
-          color: lighten($color-darkorange, 5) !important;
-          outline-color: lighten($color-darkorange, 5) !important;
+          color: lighten($color-dark-orange, 5) !important;
+          outline-color: lighten($color-dark-orange, 5) !important;
           outline-style: none !important;
           outline-width:0px !important;
         }
@@ -102,8 +102,8 @@
         }
         .ui.steps a.step:focus {
           border: 0px !important;
-          color: lighten($color-darkorange, 5) !important;
-          outline-color: lighten($color-darkorange, 5) !important;
+          color: lighten($color-dark-orange, 5) !important;
+          outline-color: lighten($color-dark-orange, 5) !important;
           outline-style: none !important;
           outline-width:0px !important;
         }
@@ -134,8 +134,8 @@
         }
         .ui.steps a.step:focus {
           border: 0px !important;
-          color: lighten($color-darkorange, 5) !important;
-          outline-color: lighten($color-darkorange, 5) !important;
+          color: lighten($color-dark-orange, 5) !important;
+          outline-color: lighten($color-dark-orange, 5) !important;
           outline-style: none !important;
           outline-width:0px !important;
         }
@@ -155,18 +155,41 @@
 }
 @media (max-width: $screen-app-xs) {
   .ng-navigation-bar {
+    display: inline-block;
+    float: left;
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
+    width: 100%;
     .navbar.navbar-default {
+      display: inline-block;
+      float: left;
+      max-width: 100%;
+      min-width: 100%;
+      position: relative;
+      width: 100%;
       .container-fluid {
+        display: inline-block;
+        float: left;
+        max-width: 100%;
+        min-width: 100%;
+        position: relative;
+        width: 100%;
         .ui.steps a.step,
         .ui.steps a.step:hover  {
           border: 0px !important;
+          display: inline-block;
+          float: left;
           font-size: 14px;
+          max-width: 100%;
+          min-width: 100%;
+          position: relative;
           width: 100% !important;
         }
         .ui.steps a.step:focus {
           border: 0px !important;
-          color: lighten($color-darkorange, 5) !important;
-          outline-color: lighten($color-darkorange, 5) !important;
+          color: lighten($color-dark-orange, 5) !important;
+          outline-color: lighten($color-dark-orange, 5) !important;
           outline-style: none !important;
           outline-width:0px !important;
         }
@@ -181,20 +204,43 @@
 }
 @media (max-width: $screen-app-xxs) {
   .ng-navigation-bar {
+    display: inline-block;
+    float: left;
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
+    width: 100%;
     .navbar.navbar-default {
+      display: inline-block;
+      float: left;
+      max-width: 100%;
+      min-width: 100%;
+      position: relative;
+      width: 100%;
       .container-fluid {
+        display: inline-block;
+        float: left;
+        max-width: 100%;
+        min-width: 100%;
+        position: relative;
+        width: 100%;
         .ui.steps a.step,
         .ui.steps a.step:hover  {
+          display: inline-block;
+          float: left;
+          max-width: 100%;
+          min-width: 100%;
+          position: relative;
+          width: 100% !important;
           border: 0px !important;
           font-size: 14px;
-          width: 100% !important;
           text-decoration: none !important;
 
         }
         .ui.steps a.step:focus {
           border: 0px !important;
-          color: lighten($color-darkorange, 5) !important;
-          outline-color: lighten($color-darkorange, 5) !important;
+          color: lighten($color-dark-orange, 5) !important;
+          outline-color: lighten($color-dark-orange, 5) !important;
           outline-style: none !important;
           outline-width:0px !important;
         }

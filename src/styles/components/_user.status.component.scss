@@ -93,12 +93,36 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
       margin-right: 10px;
       margin-top: 5px;
       text-align: center;
-      background-color: adjust_lightness($color-navy, -30);
+      background-color: lighten($color-navy, 30);
       font-size: 14px;
       color: $color-white;
       b {
         color: $color-white;
         font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: $screen-app-xs) {
+  .ng-user-status {
+    display: inline-block;
+    .container-fluent {
+      display: inline-block;
+      .title-block {
+        display: inline-block;
+        float: left;
+        max-width: 100%;
+        min-width: 100%;
+        position: relative;
+        width: 100%;
+      }
+      .content-block {
+        display: inline-block;
+        float: left;
+        max-width: 100%;
+        min-width: 100%;
+        position: relative;
+        width: 100%;
       }
     }
   }

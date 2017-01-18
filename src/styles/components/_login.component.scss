@@ -53,10 +53,30 @@
     vertical-align: middle;
     display: inline-block ! important;
   }
-  .btn.btn-primary.disabled > i {
-    color: #ffffff;
-    margin-right: 10px;
+  .alert.alert-danger {
+    display: block;
+    color: $color-dark-red;
     font-size: 19px;
     font-size: 1.4em;
   }
+  .alert.alert-info > i {
+    color: $color-dark-blue;
+    margin-right: 10px;
+    font-size: 19px;
+    font-size: 1.05em;
+  }
+  .alert.alert-info {
+    display: block;
+    color: $color-dark-blue;
+    font-size: 19px;
+    font-size: 1.4em;
+  }
+  .alert.alert-info.success {
+    color: $color-dark-green;
+    background-color: transparentize($color-green, 0.4);
+  }
+  .alert.alert-info.success > i {
+    color: $color-dark-green;
+  }
+
 }
