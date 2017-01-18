@@ -72,11 +72,68 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
         }
       }
     }
+    .btn-group {
+      position: relative;
+      float: right;
+      margin-right: 10px;
+      margin-top: 10px;
+      button.btn.btn-default.dropdown-toggle {
+        background-color: transparentize($color-black, .6);
+        border-color: #6b6565;
+        color: white;
+        font-size: 19px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-weight: bold;
+        width: 48.1875px;
+        height: 53px;
+        max-width: 48.1875px;
+        max-height: 53px;
+        min-width: 48.1875px;
+        min-height: 53px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      &.open ul.dropdown-menu {
+        background-color: transparentize($color-black, .5);
+        color: $color-white;
+        font-size: 19px;
+        min-width: 50px !important;
+        max-width: 50px !important;
+        width: 50px !important;
+        overflow: hidden;
+        li {
+          min-width: 50px !important;
+          max-width: 50px !important;
+          width: 50px !important;
+          a {
+            min-width: 50px !important;
+            max-width: 50px !important;
+            width: 50px !important;
+            color: $color-white;
+            font-size: 22px;
+            font-size: 1.15em;
+            padding-left: 10px !important;
+          }
+          a:hover {
+            min-width: 50px !important;
+            max-width: 50px !important;
+            width: 50px !important;
+            color: $color-black;
+            font-size: 22px;
+            font-size: 1.15em;
+            padding-left: 10px !important;
+            border-left: 2px solid transparentize($color-black, .5);
+            border-right: 5px solid transparentize($color-black, .5);
+          }
+        }
+      }
+    }
     div.btn-login {
       position: relative;
       cursor: pointer;
       float: right;
-      width: 200px;
+      width: 150px;
       height: 40px;
       color: white;
       margin-right: 10px;
