@@ -54,29 +54,34 @@
     display: inline-block ! important;
   }
   .alert.alert-danger {
+    margin-right: 15px;
+    margin-left: 15px;
     display: block;
     color: $color-dark-red;
-    font-size: 19px;
-    font-size: 1.4em;
+    font-size: 16px;
+    font-size: 1.2em;
   }
   .alert.alert-info > i {
     color: $color-dark-blue;
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
     font-size: 19px;
-    font-size: 1.05em;
+    font-size: 1.42em;
   }
   .alert.alert-info {
     display: block;
     color: $color-dark-blue;
-    font-size: 19px;
-    font-size: 1.4em;
+    font-size: 16px;
+    font-size: 1.2em;
   }
   .alert.alert-info.success {
-    color: $color-dark-green;
-    background-color: transparentize($color-green, 0.4);
+    margin-right: 15px;
+    margin-left: 15px;
+    color: $color-dark-green ! important;
+    background-color: transparentize($color-green, 0.4) ! important;
   }
   .alert.alert-info.success > i {
-    color: $color-dark-green;
+    color: $color-dark-green ! important;
   }
 
 }

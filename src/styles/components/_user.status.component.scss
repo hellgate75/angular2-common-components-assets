@@ -3,6 +3,7 @@
 
 $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
 .ng-user-status {
+  width: 100%;
   background-color: transparentize(opacify($ng-user-status-bg, 0), .35);
   .container-fluent {
     display: inline;
@@ -11,24 +12,44 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
       position: relative;
       float: left;
       padding-top: 20px;
-      max-width: 150px;
-      min-width: 150px;
-      width: 150px;
-      color: $color-orange;
-      font-size: 43px;
-      padding-left: 9px;
-      &:before {
-        background-color: transparent;
-        background-image: url($login-logo-url-path);
-        background-origin: content-box;
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: 22px 22px;
-        width: 22px;
-        height: 22px;
-        position: absolute;
-        margin-top: -8px;
-        margin-left: 101px;
+      margin-left: 9px;
+      display: inline-block;
+      width: 170px;
+      min-width: 170px;
+      max-width: 170px;
+      margin-bottom: 10px;
+      .title {
+        position: relative;
+        float: left;
+        left: 0px;
+        max-width: 150px;
+        min-width: 150px;
+        width: 150px;
+        color: $color-orange;
+        font-size: 43px;
+        &:before {
+          background-color: transparent;
+          background-image: url($login-logo-url-path);
+          background-origin: content-box;
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          background-size: 22px 22px;
+          margin-top: -8px;
+          margin-left: 101px;
+          width: 22px;
+          height: 22px;
+          position: absolute;
+        }
+      }
+      .sub-title {
+        left: 0px;
+        position: relative;
+        float: left;
+        color: $color-orange;
+        font-size: 19px !important;
+        text-transform: uppercase;
+        margin-top: -15px;
+        border-top: 1px solid $color-orange;
       }
     }
     .content-block {
@@ -115,6 +136,7 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
         min-width: 100%;
         position: relative;
         width: 100%;
+        padding-right: calc(100% - 170px);
       }
       .content-block {
         display: inline-block;
@@ -123,6 +145,12 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
         min-width: 100%;
         position: relative;
         width: 100%;
+      }
+      div.well {
+        margin-right: calc((100% - 150px)/2);
+      }
+      div.btn-login {
+        margin-right: calc((100% - 200px)/2);
       }
     }
   }

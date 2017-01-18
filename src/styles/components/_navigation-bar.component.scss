@@ -14,7 +14,7 @@
     border: 0px !important;
     margin: 0px !important;
     padding: 0px !important;
-    margin-left: 25px !important;
+    margin-left: 40px !important;
     display: inline-block !important;
     background-color: transparent ! important;
     .container-fluid {
@@ -38,7 +38,7 @@
         border: 0px !important;
         margin: 0px !important;
         padding: 0px !important;
-        padding-top: 20px !important;
+        padding-top: 45px !important;
         background-color: transparent ! important;
         display: block;
         margin-top: 20px;
@@ -52,7 +52,7 @@
         border: 0px !important;
         margin: 0px !important;
         padding: 0px !important;
-        padding-top: 20px !important;
+        padding-top: 45px !important;
         background-color: transparent ! important;
         display: block;
         margin-top: 20px;
@@ -116,7 +116,9 @@
     .navbar.navbar-default {
       .container-fluid {
         .ui.steps a.step,
+        .ui.steps a.step.active,
         .ui.steps a.step:hover  {
+          padding-top: 5px !important;
           border: 0px !important;
           font-size: 16px;
           width: 100% !important;
@@ -139,7 +141,7 @@
           outline-style: none !important;
           outline-width:0px !important;
         }
-        .ui.steps {
+        .ng-navigation-bar .navbar.navbar-default .ui.steps {
           @include dinline();
           border: 0px !important;
           overflow: visible;
@@ -168,6 +170,9 @@
       min-width: 100%;
       position: relative;
       width: 100%;
+      border: 0px !important;
+      padding: 0px ! important;
+      margin: 8px ! important;
       .container-fluid {
         display: inline-block;
         float: left;
@@ -176,11 +181,13 @@
         position: relative;
         width: 100%;
         .ui.steps a.step,
+        .ui.steps a.step.active,
         .ui.steps a.step:hover  {
+          padding-top: 5px !important;
           border: 0px !important;
           display: inline-block;
           float: left;
-          font-size: 14px;
+          font-size: 16px;
           max-width: 100%;
           min-width: 100%;
           position: relative;
@@ -197,6 +204,9 @@
         a.active.step:hover::after,
         a.active.step:hover::after {
           display: none !important;
+        }
+        .ng-navigation-bar .navbar.navbar-default .ui.steps {
+          display: inline-flex !important;
         }
       }
     }
@@ -217,6 +227,9 @@
       min-width: 100%;
       position: relative;
       width: 100%;
+      border: 0px !important;
+      padding: 0px ! important;
+      margin: 8px ! important;
       .container-fluid {
         display: inline-block;
         float: left;
@@ -224,6 +237,12 @@
         min-width: 100%;
         position: relative;
         width: 100%;
+        .ng-navigation-bar .navbar.navbar-default .ui.steps {
+          border: 0px !important;
+          width: 100%;
+          padding: 0px ! important;
+          margin: 0px ! important;
+        }
         .ui.steps a.step,
         .ui.steps a.step:hover  {
           display: inline-block;
@@ -233,9 +252,8 @@
           position: relative;
           width: 100% !important;
           border: 0px !important;
-          font-size: 14px;
           text-decoration: none !important;
-
+          font-size: 16px;
         }
         .ui.steps a.step:focus {
           border: 0px !important;
