@@ -48,6 +48,24 @@
     padding-top: 7px;
     text-transform: uppercase;
   }
+  .form-inline > .container-fluent > .login-option {
+    width: 100%;
+    min-width: 100%;
+    text-align: right;
+    display: block;
+    color: $color-blue;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    box-sizing: content-box;
+    right: 20px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .form-inline > .container-fluent > .login-option:first-child {
+    margin-top: 10px;
+  }
   .center, .form-group.center {
     text-align: center;
     vertical-align: middle;

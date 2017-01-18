@@ -43,6 +43,7 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
       }
       .sub-title {
         left: 0px;
+        width: 100%;
         position: relative;
         float: left;
         color: $color-orange;
@@ -111,6 +112,7 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
       border-radius: 1.2em;
       padding: 10px;
       padding-left: 15px;
+      padding-right: 15px;
       margin-right: 10px;
       margin-top: 5px;
       text-align: center;
