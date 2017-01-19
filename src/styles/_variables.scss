@@ -1,9 +1,11 @@
-/* Vendor SASS support*/
+// Vendor support
+// ====================================================================
 $legacy-support-for-ie : true;
 $legacy-support-for-ie6 : $legacy-support-for-ie;
 $legacy-support-for-ie7 : $legacy-support-for-ie;
 
-/* Base colors*/
+// Base Colors
+// ====================================================================
 $color1: #FF0000; // Red
 $color2: #FFBF00; // Orange
 $color3: #FFFF00; // Yellow
@@ -50,9 +52,17 @@ $color-light-pink: lighten($color-pink, 20);              // light pink!
 $color-dark-pink: darken($color-pink, 20);                // dark pink!
 $blockquote-bg: #faebbe;                                  // Yellowy
 $color-link: #3D518F;                                     // dark custom blue
+$color-turquoise: #6fdff3;                                // turquoise
+$color-light-turquoise: lighten($color-turquoise, 20);    // light turquoise
+$color-dark-turquoise: darken($color-turquoise, 20);      // dark turquoise
 
-// Fonts
+// Base fonts
+// ====================================================================
 $blockquote: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$main-font: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif, serif;
+$header-font: ComingSoon, 'Helvetica Neue', Arial, Helvetica, sans-serif, serif;
+$light-font: IndieFlower, 'Helvetica Neue', Arial, Helvetica, sans-serif, serif;
+$condensed-font: IM_FELL_English_SC, 'Helvetica Neue', Arial, Helvetica, sans-serif, serif;
 
 // Mixin variables
 $defined-bs-type: border-box !default;

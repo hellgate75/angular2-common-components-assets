@@ -6,6 +6,10 @@ $fa-font-path: "~font-awesome/fonts";
 /*$open-sans-path: "~open-sans/fonts";
 @import "../vendor/open-sans/scss/open-sans";*/
 
+body {
+  font-family: $main-font;
+}
+
 .ui.menu .header.item > img.logo {
   margin-right: 12px;
 }
