@@ -1,0 +1,11 @@
+
+StartChar: odieresis
+Encoding: 246 246 142
+Width: 520
+Flags: W
+LayerCount: 2
+Fore
+Refer: 100 111 N 1 0 0 1 0 0 3
+Refer: 158 168 N 1 0 0 1 -71 92 2
+Kerns2: 111 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  109 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 
+EndChar

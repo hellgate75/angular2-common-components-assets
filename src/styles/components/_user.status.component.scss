@@ -5,6 +5,10 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
 .ng-user-status {
   width: 100%;
   background-color: transparentize(opacify($ng-user-status-bg, 0), .35);
+  div, span, button {
+    font-family: 'ComingSoon', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    // font-size: 12px;
+  }
   .container-fluent {
     display: inline;
     width: 100%;
@@ -34,8 +38,8 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
           background-position: 0 0;
           background-repeat: no-repeat;
           background-size: 22px 22px;
-          margin-top: -8px;
-          margin-left: 101px;
+          margin-top: -15px;
+          margin-left: 102px;
           width: 22px;
           height: 22px;
           position: absolute;

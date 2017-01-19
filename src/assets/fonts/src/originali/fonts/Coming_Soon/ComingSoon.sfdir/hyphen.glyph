@@ -1,0 +1,46 @@
+
+StartChar: hyphen
+Encoding: 45 45 34
+Width: 402
+Flags: W
+TtInstrs:
+PUSHB_4
+ 2
+ 17
+ 9
+ 25
+SVTCA[y-axis]
+MDAP[rnd]
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+MDAP[rnd]
+MDRP[min,rnd,black]
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+355 352 m 0,0,1
+ 372 347 372 347 371 319 c 1,2,3
+ 368 297 368 297 346 297 c 1,4,5
+ 330 300 330 300 311 304 c 1,6,7
+ 294 306 294 306 271 308.5 c 128,-1,8
+ 248 311 248 311 219 311 c 256,9,10
+ 190 311 190 311 159 308 c 128,-1,11
+ 128 305 128 305 102.5 301.5 c 128,-1,12
+ 77 298 77 298 59.5 295 c 128,-1,13
+ 42 292 42 292 41 292 c 0,14,15
+ 33 292 33 292 27.5 299 c 128,-1,16
+ 22 306 22 306 20 320 c 1,17,18
+ 20 331 20 331 25 338.5 c 128,-1,19
+ 30 346 30 346 38 348 c 0,20,21
+ 40 348 40 348 57 351 c 128,-1,22
+ 74 354 74 354 100 357.5 c 128,-1,23
+ 126 361 126 361 157.5 364 c 128,-1,24
+ 189 367 189 367 219 367 c 0,25,26
+ 281 367 281 367 317 360 c 128,-1,27
+ 353 353 353 353 355 352 c 0,0,1
+EndSplineSet
+Kerns2: 78 -82 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  77 -82 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 
+EndChar

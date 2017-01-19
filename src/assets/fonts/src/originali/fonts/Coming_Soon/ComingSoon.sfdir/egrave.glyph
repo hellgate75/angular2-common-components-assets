@@ -1,0 +1,10 @@
+
+StartChar: egrave
+Encoding: 232 232 131
+Width: 505
+Flags: W
+LayerCount: 2
+Fore
+Refer: 90 101 N 1 0 0 1 0 0 3
+Refer: 85 96 N 1 0 0 1 -91 164 2
+EndChar

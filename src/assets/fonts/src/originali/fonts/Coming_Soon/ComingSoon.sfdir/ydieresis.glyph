@@ -1,0 +1,11 @@
+
+StartChar: ydieresis
+Encoding: 255 255 186
+Width: 535
+Flags: W
+LayerCount: 2
+Fore
+Refer: 110 121 N 1 0 0 1 0 0 3
+Refer: 158 168 N 1 0 0 1 -71 51 2
+Kerns2: 102 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  100 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 
+EndChar

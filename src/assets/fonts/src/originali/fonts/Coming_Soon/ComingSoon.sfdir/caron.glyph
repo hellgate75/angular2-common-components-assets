@@ -1,0 +1,49 @@
+
+StartChar: caron
+Encoding: 711 711 223
+Width: 717
+Flags: W
+TtInstrs:
+PUSHB_6
+ 19
+ 5
+ 23
+ 1
+ 27
+ 11
+SVTCA[y-axis]
+MDAP[rnd]
+MDRP[rp0,min,rnd,black]
+MDRP[rp0,min,rnd,black]
+MDRP[rnd,grey]
+SVTCA[x-axis]
+MDAP[rnd]
+MDRP[rnd,grey]
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+499 641 m 0,1,2
+ 511 641 511 641 518 634 c 0,3,4
+ 527 625 527 625 527 613 c 0,5,6
+ 527 602 527 602 519 594 c 2,7,-1
+ 457 529 l 1,8,-1
+ 391 470 l 2,9,10
+ 383 462 383 462 373 462 c 0,11,12
+ 366 462 366 462 362 465 c 1,13,14
+ 353 465 353 465 345 470 c 1,15,-1
+ 273 527 l 1,16,-1
+ 201 584 l 2,17,18
+ 190 593 190 593 190 606 c 0,19,20
+ 190 615 190 615 196 623 c 0,21,22
+ 205 634 205 634 218 634 c 0,23,24
+ 228 634 228 634 236 628 c 2,25,-1
+ 307 571 l 1,26,-1
+ 368 524 l 1,27,-1
+ 418 570 l 1,28,-1
+ 478 633 l 1,29,0
+ 488 641 488 641 499 641 c 0,1,2
+EndSplineSet
+EndChar

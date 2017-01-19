@@ -1,0 +1,11 @@
+
+StartChar: Ydieresis
+Encoding: 376 376 187
+Width: 531
+Flags: W
+LayerCount: 2
+Fore
+Refer: 78 89 N 1 0 0 1 0 0 3
+Refer: 158 168 N 1 0 0 1 -101 225 2
+Kerns2: 111 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  109 -41 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  104 -61 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  102 -92 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  101 -51 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  100 -72 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  92 -102 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  91 -41 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  90 -61 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  89 -72 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  88 -51 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  86 -72 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  70 -41 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  68 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  63 -82 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  60 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  56 -41 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  54 -82 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 
+EndChar

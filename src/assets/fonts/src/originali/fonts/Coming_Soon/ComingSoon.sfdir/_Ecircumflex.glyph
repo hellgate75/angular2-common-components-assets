@@ -1,0 +1,11 @@
+
+StartChar: Ecircumflex
+Encoding: 202 202 199
+Width: 589
+Flags: W
+LayerCount: 2
+Fore
+Refer: 58 69 N 1 0 0 1 0 0 3
+Refer: 214 710 N 1 0 0 1 -50 389 2
+Kerns2: 72 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  70 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  68 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  63 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 
+EndChar

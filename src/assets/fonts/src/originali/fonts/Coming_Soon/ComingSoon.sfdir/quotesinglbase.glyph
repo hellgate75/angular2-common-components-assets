@@ -1,0 +1,39 @@
+
+StartChar: quotesinglbase
+Encoding: 8218 8218 195
+Width: 105
+Flags: W
+TtInstrs:
+PUSHB_4
+ 16
+ 2
+ 8
+ 0
+SVTCA[y-axis]
+MDAP[rnd]
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+MDAP[rnd]
+MDRP[min,rnd,black]
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+42 122 m 1,0,1
+ 64 117 64 117 64 89 c 1,2,3
+ 59 67 59 67 54.5 27 c 128,-1,4
+ 50 -13 50 -13 46 -65 c 1,5,6
+ 44 -76 44 -76 36 -84 c 128,-1,7
+ 28 -92 28 -92 15 -91 c 0,8,9
+ 4 -90 4 -90 -3 -81.5 c 128,-1,10
+ -10 -73 -10 -73 -10 -61 c 0,11,12
+ -9 -45 -9 -45 -7 -24 c 128,-1,13
+ -5 -3 -5 -3 -2.5 19 c 128,-1,14
+ 0 41 0 41 3 62.5 c 128,-1,15
+ 6 84 6 84 9 100 c 0,16,17
+ 11 110 11 110 19.5 116.5 c 128,-1,18
+ 28 123 28 123 42 122 c 1,0,1
+EndSplineSet
+EndChar

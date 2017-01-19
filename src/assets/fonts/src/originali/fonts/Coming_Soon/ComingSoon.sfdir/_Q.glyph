@@ -1,0 +1,300 @@
+
+StartChar: Q
+Encoding: 81 81 70
+Width: 744
+Flags: W
+TtInstrs:
+NPUSHB
+ 143
+ 180
+ 125
+ 1
+ 181
+ 124
+ 1
+ 166
+ 121
+ 1
+ 165
+ 47
+ 1
+ 180
+ 125
+ 1
+ 69
+ 115
+ 1
+ 197
+ 102
+ 1
+ 197
+ 101
+ 1
+ 197
+ 100
+ 1
+ 197
+ 99
+ 1
+ 139
+ 89
+ 1
+ 170
+ 79
+ 1
+ 169
+ 78
+ 201
+ 78
+ 2
+ 69
+ 65
+ 1
+ 52
+ 65
+ 1
+ 117
+ 57
+ 1
+ 36
+ 56
+ 1
+ 116
+ 55
+ 1
+ 106
+ 47
+ 1
+ 185
+ 46
+ 1
+ 187
+ 45
+ 1
+ 186
+ 44
+ 1
+ 169
+ 44
+ 1
+ 139
+ 44
+ 1
+ 170
+ 43
+ 1
+ 139
+ 43
+ 1
+ 170
+ 42
+ 186
+ 42
+ 2
+ 186
+ 41
+ 1
+ 169
+ 41
+ 1
+ 185
+ 37
+ 1
+ 122
+ 36
+ 138
+ 36
+ 2
+ 203
+ 35
+ 1
+ 143
+ 35
+ 1
+ 123
+ 35
+ 1
+ 60
+ 35
+ 1
+ 202
+ 33
+ 1
+ 49
+ 26
+ 1
+ 53
+ 25
+ 1
+ 54
+ 24
+ 1
+ 204
+ 5
+ 1
+ 186
+ 5
+ 1
+ 69
+ 2
+ 1
+ 54
+ 2
+ 1
+ 28
+ 120
+ 52
+ 94
+ 39
+ 110
+ 62
+ 84
+SVTCA[y-axis]
+MDAP[rnd]
+MDRP[min,rnd,black]
+MDAP[rnd]
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+MDAP[rnd]
+MDRP[min,rnd,black]
+MDAP[rnd]
+MDRP[min,rnd,black]
+IUP[x]
+IUP[y]
+SVTCA[y-axis]
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+SVTCA[x-axis]
+DELTAP1
+DELTAP1
+DELTAP1
+DELTAP1
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+427 52 m 0,0,1
+ 445 57 445 57 467.5 72 c 128,-1,2
+ 490 87 490 87 513 112 c 1,3,4
+ 490 126 490 126 469 138 c 128,-1,5
+ 448 150 448 150 432.5 159 c 128,-1,6
+ 417 168 417 168 407 173 c 2,7,-1
+ 397 178 l 2,8,9
+ 389 182 389 182 385.5 188.5 c 128,-1,10
+ 382 195 382 195 382 203 c 0,11,12
+ 382 210 382 210 385 216 c 0,13,14
+ 389 224 389 224 395.5 227.5 c 128,-1,15
+ 402 231 402 231 410 231 c 0,16,17
+ 417 231 417 231 423 228 c 0,18,19
+ 424 227 424 227 434.5 221.5 c 128,-1,20
+ 445 216 445 216 462.5 206.5 c 128,-1,21
+ 480 197 480 197 502 184 c 128,-1,22
+ 524 171 524 171 548 156 c 1,23,24
+ 562 175 562 175 572 196 c 1,25,26
+ 587 224 587 224 603 269.5 c 128,-1,27
+ 619 315 619 315 619 372 c 0,28,29
+ 619 393 619 393 616 415 c 128,-1,30
+ 613 437 613 437 606 460 c 0,31,32
+ 594 499 594 499 577.5 530.5 c 128,-1,33
+ 561 562 561 562 542 586.5 c 128,-1,34
+ 523 611 523 611 503.5 629 c 128,-1,35
+ 484 647 484 647 467 660 c 0,36,37
+ 430 686 430 686 398.5 696 c 128,-1,38
+ 367 706 367 706 346 705 c 1,39,40
+ 317 697 317 697 297.5 688 c 128,-1,41
+ 278 679 278 679 278 678 c 0,42,43
+ 272 675 272 675 265 675 c 0,44,45
+ 253 675 253 675 244 684 c 1,46,47
+ 209 666 209 666 177.5 616 c 128,-1,48
+ 146 566 146 566 125 494 c 0,49,50
+ 111 447 111 447 104 399.5 c 128,-1,51
+ 97 352 97 352 97 307 c 0,52,53
+ 97 245 97 245 111 197 c 0,54,55
+ 120 165 120 165 135.5 141 c 128,-1,56
+ 151 117 151 117 169 100.5 c 128,-1,57
+ 187 84 187 84 206.5 73 c 128,-1,58
+ 226 62 226 62 243 56 c 0,59,60
+ 266 48 266 48 290.5 44 c 128,-1,61
+ 315 40 315 40 341 40 c 0,62,63
+ 386 40 386 40 427 52 c 0,0,1
+629 102 m 0,64,65
+ 696 54 696 54 730.5 20 c 128,-1,66
+ 765 -14 765 -14 767 -16 c 0,67,68
+ 775 -24 775 -24 775 -35 c 0,69,70
+ 775 -48 775 -48 766 -55 c 0,71,72
+ 756 -63 756 -63 747 -63 c 0,73,74
+ 733 -63 733 -63 726 -54 c 0,75,76
+ 726 -53 726 -53 693 -21 c 128,-1,77
+ 660 11 660 11 597 57 c 1,78,-1
+ 561 81 l 1,79,80
+ 533 50 533 50 502.5 28.5 c 128,-1,81
+ 472 7 472 7 443 -2 c 1,82,83
+ 392 -16 392 -16 341 -16 c 0,84,85
+ 311 -16 311 -16 281 -11.5 c 128,-1,86
+ 251 -7 251 -7 224 4 c 0,87,88
+ 202 12 202 12 178 25.5 c 128,-1,89
+ 154 39 154 39 131 60 c 128,-1,90
+ 108 81 108 81 88.5 110.5 c 128,-1,91
+ 69 140 69 140 57 181 c 0,92,93
+ 41 235 41 235 41 308 c 0,94,95
+ 41 356 41 356 48.5 407 c 128,-1,96
+ 56 458 56 458 71 509 c 0,97,98
+ 99 606 99 606 144 667 c 128,-1,99
+ 189 728 189 728 244 744 c 0,100,101
+ 252 747 252 747 260 748 c 128,-1,102
+ 268 749 268 749 275 749 c 0,103,104
+ 280 749 280 749 285 748.5 c 128,-1,105
+ 290 748 290 748 295 747 c 1,106,107
+ 308 752 308 752 330 759 c 0,108,109
+ 340 762 340 762 354 762 c 0,110,111
+ 384 762 384 762 422.5 747 c 128,-1,112
+ 461 732 461 732 499 705 c 0,113,114
+ 519 691 519 691 541.5 670 c 128,-1,115
+ 564 649 564 649 586 621 c 128,-1,116
+ 608 593 608 593 627 557 c 128,-1,117
+ 646 521 646 521 660 476 c 0,118,119
+ 675 425 675 425 675 372 c 0,120,121
+ 675 269 675 269 622 169 c 0,122,123
+ 611 148 611 148 595 126 c 1,124,125
+ 604 120 604 120 612.5 114 c 128,-1,126
+ 621 108 621 108 629 102 c 0,64,65
+EndSplineSet
+Kerns2: 209 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  208 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  207 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  200 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  198 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  187 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  177 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  176 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  175 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  174 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  159 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  147 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  146 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  145 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  144 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  121 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  117 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  116 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  106 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  78 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  77 -72 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  70 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  68 -20 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  55 -10 "'kern' Horizontal Kerning in Latin lookup 0 subtable"  54 -31 "'kern' Horizontal Kerning in Latin lookup 0 subtable" 
+EndChar
