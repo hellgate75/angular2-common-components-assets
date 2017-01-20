@@ -1,0 +1,175 @@
+@import "../variables";
+@import "../style";
+
+.ng-side-bar {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  overflow: visible;
+  background-color: $side-bar-background-color;
+  &.top {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    .panel-content {
+      bottom: -36px;
+      width: calc(100% - 6px) !important;
+      min-width: calc(100% - 6px) !important;
+      max-width: calc(100% - 6px) !important;
+    }
+  }
+  &.bottom {
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    .panel-content {
+      top: -36px;
+      width: calc(100% - 6px) !important;
+      min-width: calc(100% - 6px) !important;
+      max-width: calc(100% - 6px) !important;
+    }
+  }
+  &.left {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    .panel-content {
+      height: calc(100% - 6px);
+      min-height: calc(100% - 6px);
+      max-height: calc(100% - 6px);
+    }
+  }
+  &.right {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    .panel-content {
+      height: calc(100% - 6px);
+      min-height: calc(100% - 6px);
+      max-height: calc(100% - 6px);
+    }
+  }
+  .panel-content {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 3px);
+    min-width: calc(100% - 3px);
+    max-width: calc(100% - 3px);
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    color: $color-black;
+    background-color: #fefefe;
+    margin: 3px;
+  }
+  .side-bar-caret {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    white-space: nowrap; /* No white space wrap for caret*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    font-family: $light-font;
+    font-size: 17px;
+    color: $color-white;
+    cursor: pointer;
+    &.top {
+      @include sidebar-caret-top();
+      &.caret-top {
+        @include sidebar-caret-position('top', 'top');
+      }
+      &.caret-bottom {
+        @include sidebar-caret-position('bottom', 'top');
+      }
+
+      &.caret-center {
+        @include sidebar-caret-position('center', 'top');
+      }
+
+      &.caret-center-bottom {
+        @include sidebar-caret-position('center-bottom', 'top');
+      }
+
+      &.caret-center-top {
+        @include sidebar-caret-position('center-top', 'top');
+      }
+    }
+    &.bottom {
+      @include sidebar-caret-bottom();
+      &.caret-top {
+        @include sidebar-caret-position('top', 'bottom');
+      }
+      &.caret-bottom {
+        @include sidebar-caret-position('bottom', 'bottom');
+      }
+
+      &.caret-center {
+        @include sidebar-caret-position('center', 'bottom');
+      }
+
+      &.caret-center-bottom {
+        @include sidebar-caret-position('center-bottom', 'bottom');
+      }
+
+      &.caret-center-top {
+        @include sidebar-caret-position('center-top', 'bottom');
+      }
+    }
+    &.left {
+      @include sidebar-caret-left();
+      &.caret-top {
+        @include sidebar-caret-position('top', 'left');
+      }
+      &.caret-bottom {
+        @include sidebar-caret-position('bottom', 'left');
+      }
+
+      &.caret-center {
+        @include sidebar-caret-position('center', 'left');
+      }
+
+      &.caret-center-bottom {
+        @include sidebar-caret-position('center-bottom', 'left');
+      }
+
+      &.caret-center-top {
+        @include sidebar-caret-position('center-top', 'left');
+      }
+    }
+    &.right {
+      @include sidebar-caret-right();
+      &.caret-top {
+        @include sidebar-caret-position('top', 'right');
+      }
+      &.caret-bottom {
+        @include sidebar-caret-position('bottom', 'right');
+      }
+
+      &.caret-center {
+        @include sidebar-caret-position('center', 'right');
+      }
+
+      &.caret-center-bottom {
+        @include sidebar-caret-position('center-bottom', 'right');
+      }
+
+      &.caret-center-top {
+        @include sidebar-caret-position('center-top', 'right');
+      }
+    }
+  }
+
+}

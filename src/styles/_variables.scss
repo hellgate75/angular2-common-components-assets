@@ -56,6 +56,157 @@ $color-turquoise: #6fdff3;                                // turquoise
 $color-light-turquoise: lighten($color-turquoise, 20);    // light turquoise
 $color-dark-turquoise: darken($color-turquoise, 20);      // dark turquoise
 
+
+// Component Base Color
+// ====================================================================
+$side-bar-background-color: transparentize($color-dark-blue, .15);
+$side-bar-caret-background-color: $side-bar-background-color;
+$side-bar-border: 1px solid $color-black;
+$side-bar-caret-border: 1px solid $color-black;
+
+// Specific component mixin
+// Side Bar Mixins
+// ====================================================================
+@mixin sidebar-caret-border() {
+  border-top: $side-bar-border;
+  border-left: $side-bar-border;
+  border-right: $side-bar-border;
+  border-bottom: 0;
+}
+@mixin sidebar-caret-top() {
+  @if (and var(--caret-v-gap)) {
+    $caret-height: var(--caret-height);
+    @include copy-var-value('--caret-v-gap', top);
+  }
+  @include sidebar-caret-border();
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: $side-bar-caret-background-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  min-width: 150px;
+}
+@mixin sidebar-caret-bottom() {
+  @if (var(--caret-v-gap)) {
+    $caret-height: var(--caret-height);
+    @include copy-var-value('--caret-v-gap', bottom);
+  }
+  @include sidebar-caret-border();
+  border-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $side-bar-caret-background-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  min-width: 150px;
+}
+@mixin sidebar-caret-left() {
+  @if (var(--caret-h-gap)) {
+    $caret-width: var(--caret-width);
+    /*
+    @if (and var(--caret-height) != '') {
+    $caret-height: var(--caret-height);
+      @if ($caret-width > $caret-height) {
+        height: $caret-width;
+        width: $caret-height;
+      }
+    }
+    */
+    @include copy-var-value('--caret-h-gap', left);
+    float: left;
+  }
+  @include sidebar-caret-border();
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: $side-bar-caret-background-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  min-width: 150px;
+  @include rotate-text(-90);
+}
+@mixin sidebar-caret-right() {
+  @if (var(--caret-h-gap)) {
+    $caret-width: var(--caret-width);
+    /*
+    @if (and var(--caret-height) != '') {
+    $caret-height: var(--caret-height);
+      @if ($caret-width > $caret-height) {
+        height: $caret-width;
+        width: $caret-height;
+      }
+    }
+    */
+    @include copy-var-value('--caret-h-gap', right);
+    float: right;
+  }
+  @include sidebar-caret-border();
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $side-bar-caret-background-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  min-width: 150px;
+  @include rotate-text(90);
+}
+
+@mixin sidebar-caret-position($position, $location) {
+  position: relative;
+  @if($location == 'top' or $location == 'bottom') {
+    @if (var(--caret-width) != '' and var(--caret-height) != '') {
+      $caret-width: var(--caret-width);
+      $caret-height: var(--caret-height);
+      @if(position == 'top') {
+        left: 5px;
+      }
+      @else if($position == 'bottom') {
+        @include calc(right, $caret-width + 5px);
+      }
+      @else if($position == 'center') {
+        @include calc(left, "(100% - " + $caret-width + ") / 2");
+      }
+      @else if($position == 'center-top') {
+        @include calc(left, "(100% - " + $caret-width + ") / 4");
+      }
+      @else if($position == 'center-bottom') {
+        @include calc(right, "(100% - " + $caret-width + ") / 4");
+      }
+    }
+
+  }
+  @else {
+    @if (var(--caret-width) != '' and var(--caret-height) != '') {
+      $caret-width: var(--caret-width);
+      $caret-height: var(--caret-height);
+      @if(position == 'top') {
+        top: 5px;
+      }
+      @else if($position == 'bottom') {
+        @include calc(bottom, $caret-width + 5px);
+      }
+      @else if($position == 'center') {
+        @include calc(top, "(100% - " + $caret-width + ") / 2");
+      }
+      @else if($position == 'center-top') {
+        @include calc(top, "(100% - " + $caret-width + ") / 4");
+      }
+      @else if($position == 'center-bottom') {
+        @include calc(bottom, "(100% - " + $caret-width + ") / 4");
+      }
+    }
+  }
+}
+
 // Base fonts
 // ====================================================================
 $blockquote: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -117,10 +268,206 @@ $login-logo-url-path:           './assets/images/logo.png' !default;
 
 //Major directives
 
+@mixin copy-var-value($custom, $property) {
+  @if (var(unquote($custom))) {
+      $value: var(unquote($custom));
+      #{unquote($property)}: $value;
+  };
+}
+
+@mixin copy-value($source, $target) {
+  @if (unquote("#{unquote($source)}") != '') {
+    $value: unquote("#{unquote($source)}");
+    #{unquote($target)}: $value;
+  }
+}
 
 @mixin dinline() {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+@mixin rotate-text($rotateDeg) {
+  $rotateRad: $rotateDeg * (3.14159 / 180);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=#{$rotateRad}, M12=#{$rotateRad * -1}, M21=#{$rotateRad}, M22=#{$rotateRad})"; /* IE8 */
+  -moz-transform: rotate(#{$rotateDeg}deg);  /* FF3.5/3.6 */
+  -o-transform: rotate(#{$rotateDeg}deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(#{$rotateDeg}deg);  /* Saf3.1+ */
+  transform: rotate(#{$rotateDeg}deg);  /* Newer browsers (incl IE9) */
+}
+
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 16) + rem;
+}
+
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : (); /* 3 */
+  $rem: (); /* 3 */
+
+  @each $value in $values { /* 4 */
+
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+
+    @else {
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+
+      @if $unit == "rem" { /* 7 */
+        $px : append($px,  ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {     /* 8 */
+    #{$property}: $px;  /* 9 */
+  } @else {
+    #{$property}: $px;  /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
+
+$browser-context: 16  !default;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@mixin calc($property, $value) {
+  @each $pre in -webkit-, -moz-, -o- {
+    #{$property}: $pre + unquote( "calc(#{$value})" );
+  }
+  #{$property}: unquote("calc(#{$value})");
+}
+
+/*
+Usage sample:
+.selector {
+  @include with-prefix((
+    column-count: 3,
+    column-gap: 1.5em,
+    column-rule: 2px solid hotpink
+  ), webkit moz);
+}
+Produces :
+.selector {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -webkit-column-rule: 2px solid hotpink;
+  -moz-column-rule: 2px solid hotpink;
+  column-rule: 2px solid hotpink;
+}
+*/
+@mixin with-prefix($declarations, $prefixes: (), $is-unquote: false) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      @if $is-unquote {
+        #{'-' + $prefix + '-' + unquote($property)}: unquote($value);
+      }
+      @else {
+        #{'-' + $prefix + '-' + unquote($property)}: $value;
+      }
+    }
+
+    // Output standard non-prefixed declaration
+    @if $is-unquote {
+    #{$property}: $value;
+      #{$property}: unquote($value);
+    }
+    @else {
+      #{$property}: $value;
+    }
+  }
+}
+
+/*
+Usage sample:
+.selector {
+  @include std-prefix((
+    column-count: 3,
+    column-gap: 1.5em,
+    column-rule: 2px solid hotpink
+  ));
+}
+Produces :
+.selector {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  -o-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -webkit-column-rule: 2px solid hotpink;
+  -moz-column-rule: 2px solid hotpink;
+  column-rule: 2px solid hotpink;
+}
+*/
+@mixin std-prefix($declarations, $is-unquote: false) {
+  @include with-prefix($declarations, webkit moz o, $is-unquote);
+}
+
+/*
+Usage sample:
+.selector {
+  @include with-expression(top, calc(100% - 5px), webkit moz);
+}
+Produces :
+.selector {
+  top: -webkit-calc(100% - 5px);
+  top: -moz-calc(100% - 5px);
+  top: calc(100% - 5px);
+}
+*/
+@mixin with-expression($property, $expression, $prefixes: ()) {
+  @each $pre in $prefixes {
+    #{$property}: unquote("-#{$pre}-#{$expression}");
+  }
+  #{$property}: unquote(#{$expression});
+}
+
+
+/*
+Usage sample:
+.selector {
+  @include with-expression(top, calc(100% - 5px));
+}
+Produces :
+.selector {
+  top: -webkit-calc(100% - 5px);
+  top: -moz-calc(100% - 5px);
+  top: -o-calc(100% - 5px);
+  top: calc(100% - 5px);
+}
+*/
+@mixin std-expression($property, $expression) {
+  @include with-expression($property, $expression, webkit moz o);
 }

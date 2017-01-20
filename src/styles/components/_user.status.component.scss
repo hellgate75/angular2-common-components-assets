@@ -6,7 +6,7 @@ $ng-user-status-bg: opacify(transparentize(opacify($color-navy, .6), .8), .6);
   width: 100%;
   background-color: transparentize(opacify($ng-user-status-bg, 0), .35);
   div, span, button {
-    font-family: 'ComingSoon', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: $header-font;
     // font-size: 12px;
   }
   .container-fluent {

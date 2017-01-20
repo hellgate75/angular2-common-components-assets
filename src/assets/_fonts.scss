@@ -45,6 +45,70 @@ $web-fonts-path: 'assets/fonts/' !default;
   font-style: normal;
 }
 
+/* The Tymes */
+
+@font-face {
+  font-family: 'TheTymes';
+  src: url($web-fonts-path + 'TheTymes.eot');
+  src: url($web-fonts-path + 'TheTymes.eot?#iefix') format('embedded-opentype'),
+  url($web-fonts-path + 'TheTymes.woff2') format('woff2'),
+  url($web-fonts-path + 'TheTymes.woff') format('woff'),
+  url($web-fonts-path + 'TheTymes.ttf') format('truetype'),
+  url($web-fonts-path + 'TheTymes.svg#ComingSoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Microsoft Constantia */
+
+@font-face {
+  font-family: 'Constantia';
+  src: url($web-fonts-path + 'Constantia.eot');
+  src: url($web-fonts-path + 'Constantia.eot?#iefix') format('embedded-opentype'),
+  url($web-fonts-path + 'Constantia.woff2') format('woff2'),
+  url($web-fonts-path + 'Constantia.woff') format('woff'),
+  url($web-fonts-path + 'Constantia.ttf') format('truetype'),
+  url($web-fonts-path + 'Constantia.svg#ComingSoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Constantia';
+  src: url($web-fonts-path + 'Constantia-Italic.eot');
+  src: url($web-fonts-path + 'Constantia-Italic.eot?#iefix') format('embedded-opentype'),
+  url($web-fonts-path + 'Constantia-Italic.woff2') format('woff2'),
+  url($web-fonts-path + 'Constantia-Italic.woff') format('woff'),
+  url($web-fonts-path + 'Constantia-Italic.ttf') format('truetype'),
+  url($web-fonts-path + 'Constantia-Italic.svg#ComingSoon') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Constantia';
+  src: url($web-fonts-path + 'Constantia-Bold.eot');
+  src: url($web-fonts-path + 'Constantia-Bold.eot?#iefix') format('embedded-opentype'),
+  url($web-fonts-path + 'Constantia-Bold.woff2') format('woff2'),
+  url($web-fonts-path + 'Constantia-Bold.woff') format('woff'),
+  url($web-fonts-path + 'Constantia-Bold.ttf') format('truetype'),
+  url($web-fonts-path + 'Constantia-Bold.svg#ComingSoon') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Constantia';
+  src: url($web-fonts-path + 'Constantia-BoldItalic.eot');
+  src: url($web-fonts-path + 'Constantia-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url($web-fonts-path + 'Constantia-BoldItalic.woff2') format('woff2'),
+  url($web-fonts-path + 'Constantia-BoldItalic.woff') format('woff'),
+  url($web-fonts-path + 'Constantia-BoldItalic.ttf') format('truetype'),
+  url($web-fonts-path + 'Constantia-BoldItalic.svg#ComingSoon') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* Lato */
 
 /*
