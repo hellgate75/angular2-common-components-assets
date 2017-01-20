@@ -6,8 +6,8 @@
   display: block;
   z-index: 1;
   overflow: visible;
-  background-color: $side-bar-background-color;
   &.top {
+    @include sidebar-top-style();
     left: 0px;
     top: 0px;
     width: 100%;
@@ -18,9 +18,12 @@
       width: calc(100% - 6px) !important;
       min-width: calc(100% - 6px) !important;
       max-width: calc(100% - 6px) !important;
+      background-color: $side-bar-top-panel-background-color;
+      color: $side-bar-top-panel-color;
     }
   }
   &.bottom {
+    @include sidebar-bottom-style();
     left: 0px;
     bottom: 0px;
     width: 100%;
@@ -32,9 +35,12 @@
       width: calc(100% - 6px) !important;
       min-width: calc(100% - 6px) !important;
       max-width: calc(100% - 6px) !important;
+      background-color: $side-bar-bottom-panel-background-color;
+      color: $side-bar-bottom-panel-color;
     }
   }
   &.left {
+    @include sidebar-left-style();
     top: 0px;
     left: 0px;
     height: 100%;
@@ -44,9 +50,12 @@
       height: calc(100% - 6px);
       min-height: calc(100% - 6px);
       max-height: calc(100% - 6px);
+      background-color: $side-bar-left-panel-background-color;
+      color: $side-bar-left-panel-color;
     }
   }
   &.right {
+    @include sidebar-right-style();
     top: 0px;
     right: 0px;
     height: 100%;
@@ -56,6 +65,8 @@
       height: calc(100% - 6px);
       min-height: calc(100% - 6px);
       max-height: calc(100% - 6px);
+      background-color: $side-bar-right-panel-background-color;
+      color: $side-bar-right-panel-color;
     }
   }
   .panel-content {
@@ -69,8 +80,6 @@
     height: 100%;
     min-height: 100%;
     max-height: 100%;
-    color: $color-black;
-    background-color: #fefefe;
     margin: 3px;
   }
   .side-bar-caret {
@@ -84,9 +93,9 @@
     text-align: center;
     font-family: $light-font;
     font-size: 17px;
-    color: $color-white;
     cursor: pointer;
     &.top {
+      color: $side-bar-top-caret-color;
       @include sidebar-caret-top();
       &.caret-top {
         @include sidebar-caret-position('top', 'top');
@@ -108,6 +117,7 @@
       }
     }
     &.bottom {
+      color: $side-bar-bottom-caret-color;
       @include sidebar-caret-bottom();
       &.caret-top {
         @include sidebar-caret-position('top', 'bottom');
@@ -129,6 +139,7 @@
       }
     }
     &.left {
+      color: $side-bar-left-caret-color;
       @include sidebar-caret-left();
       &.caret-top {
         @include sidebar-caret-position('top', 'left');
@@ -150,6 +161,7 @@
       }
     }
     &.right {
+      color: $side-bar-right-caret-color;
       @include sidebar-caret-right();
       &.caret-top {
         @include sidebar-caret-position('top', 'right');

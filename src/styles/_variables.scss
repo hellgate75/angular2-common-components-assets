@@ -17,6 +17,8 @@ $color8: #7F00FF; // Purple
 $color9: #FF00FF; // Magenta
 $color10: #000; // Black
 $color11: #fff; // White
+$color12: #6fdff3; //turquoise
+$color13: #979797; //grey
 $color-red: $color1;                                      // red
 $color-light-red: lighten($color-red, 20);                // light red
 $color-dark-red: darken($color-red, 20);                  // dark red
@@ -52,37 +54,142 @@ $color-light-pink: lighten($color-pink, 20);              // light pink!
 $color-dark-pink: darken($color-pink, 20);                // dark pink!
 $blockquote-bg: #faebbe;                                  // Yellowy
 $color-link: #3D518F;                                     // dark custom blue
-$color-turquoise: #6fdff3;                                // turquoise
+$color-turquoise: $color12;                                // turquoise
 $color-light-turquoise: lighten($color-turquoise, 20);    // light turquoise
 $color-dark-turquoise: darken($color-turquoise, 20);      // dark turquoise
+$color-grey: $color13;                                   // grey
+$color-light-grey: lighten($color-grey, 20);             // light grey
+$color-lighter-grey: lighten($color-grey, 30);           // lighter grey
+$color-dark-grey: darken($color-grey, 20);               // dark grey
 
 
 // Component Base Color
 // ====================================================================
-$side-bar-background-color: transparentize($color-dark-blue, .15);
-$side-bar-caret-background-color: $side-bar-background-color;
-$side-bar-border: 1px solid $color-black;
-$side-bar-caret-border: 1px solid $color-black;
+$side-bar-background-color: transparentize($color-dark-grey, .20) !default;
+$side-bar-caret-background-color: $side-bar-background-color !default;
+$side-bar-border: 1px solid transparentize($color-black, .20) !default;
+$side-bar-caret-border: 1px solid transparentize($color-black, .20) !default;
+$side-bar-caret-color: $color-white !default;
+$side-bar-panel-background-color: transparentize($color-lighter-grey, .20) !default;
+$side-bar-panel-color: $color-black !default;
+
+$side-bar-top-background-color: $side-bar-background-color !default;
+$side-bar-top-caret-background-color: $side-bar-caret-background-color !default;
+$side-bar-top-border: $side-bar-border !default;
+$side-bar-top-caret-border: $side-bar-caret-border !default;
+$side-bar-top-caret-color: $side-bar-caret-color !default;
+$side-bar-top-panel-background-color: $side-bar-panel-background-color !default;
+$side-bar-top-panel-color: $side-bar-panel-color !default;
+
+$side-bar-bottom-background-color: $side-bar-background-color !default;
+$side-bar-bottom-caret-background-color: $side-bar-caret-background-color !default;
+$side-bar-bottom-border: $side-bar-border !default;
+$side-bar-bottom-caret-border: $side-bar-caret-border !default;
+$side-bar-bottom-caret-color: $side-bar-caret-color !default;
+$side-bar-bottom-panel-background-color: $side-bar-panel-background-color !default;
+$side-bar-bottom-panel-color: $side-bar-panel-color !default;
+
+$side-bar-left-background-color: $side-bar-background-color !default;
+$side-bar-left-caret-background-color: $side-bar-caret-background-color !default;
+$side-bar-left-border: $side-bar-border !default;
+$side-bar-left-caret-border: $side-bar-caret-border !default;
+$side-bar-left-caret-color: $side-bar-caret-color !default;
+$side-bar-left-panel-background-color: $side-bar-panel-background-color !default;
+$side-bar-left-panel-color: $side-bar-panel-color !default;
+
+$side-bar-right-background-color: $side-bar-background-color !default;
+$side-bar-right-caret-background-color: $side-bar-caret-background-color !default;
+$side-bar-right-border: $side-bar-border !default;
+$side-bar-right-caret-border: $side-bar-caret-border !default;
+$side-bar-right-caret-color: $side-bar-caret-color !default;
+$side-bar-right-panel-background-color: $side-bar-panel-background-color !default;
+$side-bar-right-panel-color: $side-bar-panel-color !default;
 
 // Specific component mixin
 // Side Bar Mixins
 // ====================================================================
-@mixin sidebar-caret-border() {
-  border-top: $side-bar-border;
-  border-left: $side-bar-border;
-  border-right: $side-bar-border;
+@mixin sidebar-top-style() {
+  border-top: 0;
+  border-left: $side-bar-top-border;
+  border-right: $side-bar-top-border;
+  border-bottom: $side-bar-top-border;
+  background-color: $side-bar-top-background-color;
+  @include std-expression(border-radius, 0px);
+  @include std-expression(border-bottom-left-radius, 5px);
+  @include std-expression(border-bottom-right-radius, 5px);
+}
+
+@mixin sidebar-bottom-style() {
+  border-top: $side-bar-bottom-border;
+  border-left: $side-bar-bottom-border;
+  border-right: $side-bar-bottom-border;
+  border-bottom: 0;
+  background-color: $side-bar-bottom-background-color;
+  @include std-expression(border-radius, 0px);
+  @include std-expression(border-top-left-radius, 5px);
+  @include std-expression(border-top-right-radius, 5px);
+}
+
+@mixin sidebar-left-style() {
+  border-top: $side-bar-left-border;
+  border-left: 0;
+  border-right: $side-bar-left-border;
+  border-bottom: $side-bar-left-border;
+  background-color: $side-bar-left-background-color;
+  @include std-expression(border-radius, 0px);
+  @include std-expression(border-top-right-radius, 5px);
+  @include std-expression(border-bottom-right-radius, 5px);
+}
+
+@mixin sidebar-right-style() {
+  border-top: $side-bar-right-border;
+  border-left: $side-bar-right-border;
+  border-right: 0;
+  border-bottom: $side-bar-right-border;
+  background-color: $side-bar-right-background-color;
+  @include std-expression(border-radius, 0px);
+  @include std-expression(border-top-left-radius, 5px);
+  @include std-expression(border-bottom-left-radius, 5px);
+}
+
+@mixin sidebar-caret-right-border() {
+  border-top: $side-bar-left-border;
+  border-left: $side-bar-left-border;
+  border-right: $side-bar-left-border;
   border-bottom: 0;
 }
+
+@mixin sidebar-caret-left-border() {
+  border-top: $side-bar-right-border;
+  border-left: $side-bar-right-border;
+  border-right: $side-bar-right-border;
+  border-bottom: 0;
+}
+
+@mixin sidebar-caret-top-border() {
+  border-top: $side-bar-bottom-border;
+  border-left: $side-bar-bottom-border;
+  border-right: $side-bar-bottom-border;
+  border-bottom: 0;
+}
+
+@mixin sidebar-caret-bottom-border() {
+  border-top: 0;
+  border-left: $side-bar-top-border;
+  border-right: $side-bar-top-border;
+  border-bottom: $side-bar-top-border;
+}
+
 @mixin sidebar-caret-top() {
   @if (and var(--caret-v-gap)) {
     $caret-height: var(--caret-height);
     @include copy-var-value('--caret-v-gap', top);
   }
-  @include sidebar-caret-border();
+  @include sidebar-caret-top-border();
   border-radius: 0;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  background-color: $side-bar-caret-background-color;
+  background-color: $side-bar-bottom-caret-background-color;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 2px;
@@ -94,11 +201,11 @@ $side-bar-caret-border: 1px solid $color-black;
     $caret-height: var(--caret-height);
     @include copy-var-value('--caret-v-gap', bottom);
   }
-  @include sidebar-caret-border();
+  @include sidebar-caret-bottom-border();
   border-radius: 0;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: $side-bar-caret-background-color;
+  background-color: $side-bar-top-caret-background-color;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -120,11 +227,11 @@ $side-bar-caret-border: 1px solid $color-black;
     @include copy-var-value('--caret-h-gap', left);
     float: left;
   }
-  @include sidebar-caret-border();
+  @include sidebar-caret-left-border();
   border-radius: 0;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  background-color: $side-bar-caret-background-color;
+  background-color: $side-bar-right-caret-background-color;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -147,11 +254,11 @@ $side-bar-caret-border: 1px solid $color-black;
     @include copy-var-value('--caret-h-gap', right);
     float: right;
   }
-  @include sidebar-caret-border();
+  @include sidebar-caret-right-border();
   border-radius: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: $side-bar-caret-background-color;
+  background-color: $side-bar-left-caret-background-color;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -282,13 +389,6 @@ $login-logo-url-path:           './assets/images/logo.png' !default;
   }
 }
 
-@mixin dinline() {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 @mixin rotate-text($rotateDeg) {
   $rotateRad: $rotateDeg * (3.14159 / 180);
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=#{$rotateRad}, M12=#{$rotateRad * -1}, M21=#{$rotateRad}, M22=#{$rotateRad})"; /* IE8 */
@@ -363,7 +463,14 @@ $browser-context: 16  !default;
   #{$property}: unquote("calc(#{$value})");
 }
 
-/*
+@mixin dinline() {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/**
 Usage sample:
 .selector {
   @include with-prefix((
@@ -384,7 +491,7 @@ Produces :
   -moz-column-rule: 2px solid hotpink;
   column-rule: 2px solid hotpink;
 }
-*/
+**/
 @mixin with-prefix($declarations, $prefixes: (), $is-unquote: false) {
   @each $property, $value in $declarations {
     @each $prefix in $prefixes {
@@ -407,7 +514,7 @@ Produces :
   }
 }
 
-/*
+/**
 Usage sample:
 .selector {
   @include std-prefix((
@@ -430,12 +537,12 @@ Produces :
   -moz-column-rule: 2px solid hotpink;
   column-rule: 2px solid hotpink;
 }
-*/
+**/
 @mixin std-prefix($declarations, $is-unquote: false) {
   @include with-prefix($declarations, webkit moz o, $is-unquote);
 }
 
-/*
+/**
 Usage sample:
 .selector {
   @include with-expression(top, calc(100% - 5px), webkit moz);
@@ -446,7 +553,7 @@ Produces :
   top: -moz-calc(100% - 5px);
   top: calc(100% - 5px);
 }
-*/
+**/
 @mixin with-expression($property, $expression, $prefixes: ()) {
   @each $pre in $prefixes {
     #{$property}: unquote("-#{$pre}-#{$expression}");
@@ -455,7 +562,7 @@ Produces :
 }
 
 
-/*
+/**
 Usage sample:
 .selector {
   @include with-expression(top, calc(100% - 5px));
@@ -467,7 +574,8 @@ Produces :
   top: -o-calc(100% - 5px);
   top: calc(100% - 5px);
 }
-*/
+**/
 @mixin std-expression($property, $expression) {
   @include with-expression($property, $expression, webkit moz o);
 }
+
