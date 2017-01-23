@@ -1,0 +1,99 @@
+@import '../variables';
+@import '../style';
+
+@media (min-width: $screen-app-lg) {
+}
+@media (max-width: $screen-app-md) {
+}
+@media (max-width: $screen-app-sm) {
+}
+@media (max-width: $screen-app-xs) {
+}
+@media (max-width: $screen-app-xxs) {
+}
+
+.ng-form-wizard {
+  --panel-height: 0px;
+  --panel-width: 0px;
+  display: inline-block;
+  width: 100%;
+  margin-top: calc((-1 * 25px) + (-1 * (var(--panel-height) - 480px) * 0.15 ) );
+  .wizard-pane {
+    .ui-form {
+      .ui-form-pane {
+        &.hidden {
+          display: none;
+        }
+        .action-button {
+          font-size: 20px;
+          color: $color-grey;
+          position: relative;
+          float: right;
+          cursor: pointer;
+          margin-top: 15px;
+        }
+        .action-button.left {
+          float: left;
+        }
+        .title {
+          font-size: 20px;
+          width: 100%;
+          text-align: center;
+          color: darkred;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .generic-message {
+    display: inline-block;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    i {
+      position: relative;
+      float: left;
+      margin-right: 10px;
+      font-size: 25px;
+      border: 2px solid #007FFF;
+      border-radius: 30px / 30px;
+      width: 35px;
+      height: 35px;
+      padding-left: 11px;
+      padding-left: .43em;
+      padding-top: 3px;
+      padding-top: 0.12em;
+    }
+    span {
+      position: relative;
+      float: left;
+      font-size: 20px;
+      max-width: 400px;
+      overflow: visible;
+      text-overflow: initial;
+      white-space: initial;
+    }
+    span:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &.error {
+      color: $color-dark-red;
+      i {
+        border: 2px solid $color-dark-red;
+      }
+    }
+    &.success {
+      color: $color-dark-green;
+      i {
+        border: 2px solid $color-dark-green;
+        border: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        font-size: 35px;
+      }
+    }
+  }
+}
